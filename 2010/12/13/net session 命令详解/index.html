@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>net session 命令详解 | 网络蝙蝠侠部落</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在日常职场工作中，常会遇到这样一种情况，如某公司局域网内有很多普通打印机需要共享，而大部份的这些打印机都是安装连接在某部门某位职员的电脑上，之后再由此位职员将所安装好后的打印共享出来，局域网内或同部门的职员要使用此打印机时便连接过去。由于职场职员一般都是使用的XP专业版，而微软的win2000pro或winxp pro对连接数是有限定的，这个数为10。所以当连接到共享打印机职员电脑上的连接数达到1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="net session 命令详解">
+<meta property="og:url" content="http://yoursite.com/2010/12/13/net session 命令详解/index.html">
+<meta property="og:site_name" content="网络蝙蝠侠部落">
+<meta property="og:description" content="在日常职场工作中，常会遇到这样一种情况，如某公司局域网内有很多普通打印机需要共享，而大部份的这些打印机都是安装连接在某部门某位职员的电脑上，之后再由此位职员将所安装好后的打印共享出来，局域网内或同部门的职员要使用此打印机时便连接过去。由于职场职员一般都是使用的XP专业版，而微软的win2000pro或winxp pro对连接数是有限定的，这个数为10。所以当连接到共享打印机职员电脑上的连接数达到1">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="net session 命令详解">
+<meta name="twitter:description" content="在日常职场工作中，常会遇到这样一种情况，如某公司局域网内有很多普通打印机需要共享，而大部份的这些打印机都是安装连接在某部门某位职员的电脑上，之后再由此位职员将所安装好后的打印共享出来，局域网内或同部门的职员要使用此打印机时便连接过去。由于职场职员一般都是使用的XP专业版，而微软的win2000pro或winxp pro对连接数是有限定的，这个数为10。所以当连接到共享打印机职员电脑上的连接数达到1">
+  
+    <link rel="alternative" href="/atom.xml" title="网络蝙蝠侠部落" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Edison</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="/#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/FTP/" style="font-size: NaNpx;">FTP</a><a href="/tags/TCP-IP/" style="font-size: NaNpx;">TCP/IP</a><a href="/tags/WIN8/" style="font-size: NaNpx;">WIN8</a><a href="/tags/explorer/" style="font-size: NaNpx;">explorer</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Edison</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="">
+				<hgroup>
+				  <h1 class="header-author">Edison</h1>
+				</hgroup>
+			</div>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="/#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-net session 命令详解" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2010/12/13/net session 命令详解/" class="article-date">
+  	<time datetime="2010-12-13T03:48:59.000Z" itemprop="datePublished">2010-12-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      net session 命令详解
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/网络学堂/">网络学堂</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><span style="color: #000000;">在日常职场工作中，常会遇到这样一种情况，如某公司局域网内有很多普通打印机需要共享，而大部份的这些打印机都是安装连接在某部门某位职员的电脑上，之后再由此位职员将所安装好后的打印共享出来，局域网内或同部门的职员要使用此打印机时便连接过去。由于职场职员一般都是使用的XP专业版，而微软的win2000pro或winxp pro对连接数是有限定的，这个数为10。所以当连接到共享打印机职员电脑上的连接数达到10时，第11位用户便会出现无法再连接的情况。出现这种情况，我们就需要用到net session这个命令了，除非你给每位共享打印机的职员都安装服务器版的操作系统吧。</span></p>
+<p><span style="color: #808040;"><a id="more"></a><br></span></p>
+<p><span style="color: #000000;">net session在CMD模式下运行，如果输入不带任何参数的net session，将显示连接到本地计算机的全部连接数，输出如下所示：</span></p>
+<h2 id="Computer_User_name_Client_type_Opens_Idle_time"><span style="color: #000000;">Computer            User name               Client type         Opens     Idle time</span></h2><p>\192.168.0.90 ISDR                       Windows 2000       1         00:00:13<br>\SHARE            Administrator      Windows 2000       0        01:05:13</p>
+<p><span style="color: #000000;">从上面可以看出，有两台计算机连接到本地计算机，且192.168.0.90这台计算机打开了一个共享文件夹，活动时间为00:00:13。</span></p>
+<p><span style="color: #000000;">net session语法：</span></p>
+<p><span style="color: #000000;"><strong>net session</strong> [<strong>\</strong><em>ComputerName</em>] [<strong>/delete</strong>]</span></p>
+<p><span style="color: #000000;"><strong><a><span style="color: #000000;">\</span></a></strong><a><span style="color: #000000;"><em><span style="color: #808040;">ComputerName</span></em></span></a>：表示连接到本地计算机的远程计算机名字，此处也可以是远程主机IP；</span></p>
+<p><span style="color: #000000;"><strong>/delete</strong>：此参数可以结束指定远程主机与本机计算机的连接。</span></p>
+<p><span style="color: #000000;">比如，当共享主机的连接数到达10以后，我们可以通过使用net session来查看具体的连接时间，并可以手工删除一些连接，以让有需要的用户再连接进来。</span></p>
+<p><span style="color: #000000;">net session <a><span style="color: #000000;">\192.168.0.90</span></a> /delete 这样就会断开90这台主机与本机的连接，命令输入确定后，会有提示问你是否真的要断开，选择Y。</span></p>
+<p><span style="color: #000000;">net session /delete这样会断开所有的连接用户。</span></p>
+<p><span style="color: #000000;">net session <a><span style="color: #000000;">\SHARE</span></a></span><span style="color: #808040;"><span style="color: #000000;"> 显示SHARE主机与本机连接的详细信息</span><br></span></p>
+<p><span style="color: #ff8000;">注：以上所提到的连接数与网上所说的TCP/IP半开连接数不是同一概念！</span></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2010/12/16/IFEO注册表路径/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          IFEO注册表路径
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2010/12/09/利用devcon实现USB设备重新加载/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">利用devcon实现USB设备重新加载</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="net session 命令详解" data-title="net session 命令详解" data-url="http://yoursite.com/2010/12/13/net session 命令详解/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Edison
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/mobile.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  </div>
+</body>
+</html>

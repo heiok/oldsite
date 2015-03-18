@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>qmail基本工作原理 | 网络蝙蝠侠部落</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="qmail基本工作原理qmail**邮件投递工作基本原理**：qmail-inject负责接收本地邮件用户投递的邮件，qmail-smtpd负责接收远端邮件用户投递的邮件，交给程序qmail-queue处理后放入邮件队列，qmail-send会依次检查邮件队列中的状态，如果邮件的状态是投递永久失败，qmail-send会调用qmail-clean将邮件从邮件队列中删除，如果邮件状态是没有投递过或者">
+<meta property="og:type" content="article">
+<meta property="og:title" content="qmail基本工作原理">
+<meta property="og:url" content="http://yoursite.com/2013/04/12/qmail基本工作原理/index.html">
+<meta property="og:site_name" content="网络蝙蝠侠部落">
+<meta property="og:description" content="qmail基本工作原理qmail**邮件投递工作基本原理**：qmail-inject负责接收本地邮件用户投递的邮件，qmail-smtpd负责接收远端邮件用户投递的邮件，交给程序qmail-queue处理后放入邮件队列，qmail-send会依次检查邮件队列中的状态，如果邮件的状态是投递永久失败，qmail-send会调用qmail-clean将邮件从邮件队列中删除，如果邮件状态是没有投递过或者">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="qmail基本工作原理">
+<meta name="twitter:description" content="qmail基本工作原理qmail**邮件投递工作基本原理**：qmail-inject负责接收本地邮件用户投递的邮件，qmail-smtpd负责接收远端邮件用户投递的邮件，交给程序qmail-queue处理后放入邮件队列，qmail-send会依次检查邮件队列中的状态，如果邮件的状态是投递永久失败，qmail-send会调用qmail-clean将邮件从邮件队列中删除，如果邮件状态是没有投递过或者">
+  
+    <link rel="alternative" href="/atom.xml" title="网络蝙蝠侠部落" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Edison</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="/#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/FTP/" style="font-size: NaNpx;">FTP</a><a href="/tags/TCP-IP/" style="font-size: NaNpx;">TCP/IP</a><a href="/tags/WIN8/" style="font-size: NaNpx;">WIN8</a><a href="/tags/explorer/" style="font-size: NaNpx;">explorer</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Edison</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="">
+				<hgroup>
+				  <h1 class="header-author">Edison</h1>
+				</hgroup>
+			</div>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="/#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-qmail基本工作原理" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2013/04/12/qmail基本工作原理/" class="article-date">
+  	<time datetime="2013-04-11T23:06:49.000Z" itemprop="datePublished">2013-04-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      qmail基本工作原理
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/网络基础/">网络基础</a><a class="article-category-link" href="/categories/网络基础/网络学堂/">网络学堂</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="qmail基本工作原理"><strong>qmail基本工作原理</strong></h2><p><strong>qmail**</strong>邮件投递工作基本原理**：qmail-inject负责<wbr>接收本地邮件用户投递的邮件，qmail-smtpd负责接收远<wbr>端邮件用户投递的邮件，交给程序qmail-queue处理后放<wbr>入邮件队列，qmail-send会依次检查邮件队列中的状态，<wbr>如果邮件的状态是投递永久失败，qmail-send会调用qm<wbr>ail-clean将邮件从邮件队列中删除，<wbr>如果邮件状态是没有投递过或者是暂时失败，qmail-send<wbr>会把投递到本地邮件服务器的邮件传递给qmail-lspawn<wbr>，把投递到远程邮件服务器的邮件传递给qmail-rspawn<wbr>，qmail-lspawn会调度邮件投递的序列和时间，然后让<wbr>qmail-local将邮件投递到本地邮件用户的邮箱中，qm<wbr>ail-rspawn也会调度邮件的投递序号和时间，然后调用q<wbr>mail-remote将邮件投递到远端用户的邮箱中。</p>
+<a id="more"></a>
+<p>Qmail的使用简介<br>编译前修改系统参数。<br>建立qmail工作目录：<br>默认情况下，qmail原代码会把qmail的目录设置成/<wbr>var/qmail,如果你想把这个目录换成其他自己想要的位置<wbr>，必须在编译前修改qmail-1.03目录中的conf-<wbr>qmail文件。</p>
+<p><strong>Qmail**</strong>配置参数**：<br>1． badmailfrom<br>这个配置文件是控制邮件系统拒绝接收的邮件地址和邮件域，<wbr>主要是为了防止垃圾邮件。<wbr>如果一个邮件地址或者邮件域被列入到这个文件中，<wbr>系统就会拒绝接收这个邮件地址发来的邮件，<wbr>或者拒绝邮件域下所有邮件地址发来的邮件。<wbr>不过这个配置文件只是一般的垃圾邮件防范手段，<wbr>对于比较全面的垃圾邮件过滤技术还要靠第三方软件来实现。<wbr>该文件的格式如下：<br>11@11.com    //拒绝这个地址发来的邮件<br>22@2w.com<br>@33.com      //拒绝这个邮件域下的所有帐号发来<wbr>的邮件<br>@44.com</p>
+<p>2． boucefrom<br>bouceform是定义当邮件投递失败时系统返回给发送者一个<wbr>包含失败信息的邮件时的发送者。如果不存在这个文件，<wbr>默认的发送者是MAILER-DAEMON。比如本文的<br>echo postmaster &gt; /var/qmail/control/bouncefrom<br>就是定义投递者为postmaster，<wbr>这样所有投递失败的返回邮件的发送者就成了postmaster<wbr>。</p>
+<p>3． concurrencylocal<br>这个文件定义了qmail可以同时投递的本地邮件的个数。<wbr>这个参数的缺省值是10，也就是说系统允许同时有10个邮件在本<wbr>地投递。concurrencylocal这个参数的最大值是由<wbr>编译时的conf-spawn参数来决定的，缺省值是120，<wbr>最大值是255。</p>
+<p>4． concurrencyremote<br>这个参数定义了qmail可以同时投递的远端邮件的个数，<wbr>这个参数的缺省值是20。这个参数的最大值也是由conf-<wbr>spawn来决定的。</p>
+<p>5． defaultdomain<br>它主要用于邮件用户在投递给同一邮件服务器的邮件用户时的邮件投<wbr>递处理，比如邮件服务器cnunix.com.cn用户user<wbr>发送邮件给另一个邮件用户user1@cnunix，这实qma<wbr>il-inject会将defaultdomain中定义的邮件<wbr>域名加入到这个邮件的目标地址中，qmail会自动认为这个邮件<wbr>的目标地址是user1@cnunix.com.cn，<wbr>并按照这个地址进行投递。当这个文件不存在的时候，qmail会<wbr>从配置文件me中读取这个参数。如果系统变量QMAILDEFA<wbr>ULTDOMAIN已经设置，defaultdomain定义的<wbr>参数将被忽略。</p>
+<p>6． defaulthost<br>它和defaultdomain类似，<wbr>当邮件系统接收到没有目标主机名的邮件时，<wbr>这个设置文件定义了系统往这个邮件中加入的目标主机名名称。<wbr>在缺省情况下，qmail-inject会将defaultho<wbr>st中定义的名称加入到没有定义投递邮件地址的邮件的目标主机名<wbr>中，如果defaulthost不存在，<wbr>加入的目标主机名将是字符串“defaulthost”，def<wbr>aulthost主要用于邮件用户在投递给同一邮件服务器的邮件<wbr>进行投递处理。如果系统变量QMAILDEFAULTHOST已<wbr>经设置，defaulthost定义的参数将被忽略。</p>
+<p>7． databyes<br>它定义了qmail-smtpd所允许接收的邮件的最大字节数。<wbr>这个参数的缺省值为0，表示对接收邮件的字节数没有限制。<wbr>如果要限制最大的接收为10M，操作如下：<br>echo 10485760 &gt; /var/qmail/control/databytes<br>这样任何大于10M的邮件都会被拒绝。<wbr>这个参数最好设置上，<wbr>以避免恶意的对你服务器发送大量的超大邮件，<wbr>产生邮件服务器负荷过大，甚至系统崩溃的危险。</p>
+<p>8． doublebouncehost<br>这个配置文件定义了出现“双重反弹”的时候，<wbr>系统转发的邮件的主机名称。“双重反弹”就是当系统因为投递失败<wbr>将邮件返回给发送者时，发送者又将此邮件返回，这个时候qmai<wbr>l将会把这个邮件转发到另一个邮件地址，<wbr>一般这个地址就是管理员的地址。doublebouncehos<wbr>t就是定义这个转发的邮件地址的主机名部分，<wbr>而这个邮件地址的用户名部分是由doublebouceto来定<wbr>义的，因此这两个配置文件一般都是结合起来使用的。当doubl<wbr>ebouncehost不存在的时候，系统将会从配置文件me中<wbr>读取这个参数</p>
+<p>9． doublebounceto<br>这个参说是结合blebouncehost来使用的，<wbr>当这个参数不存在的时候，系统缺省值是postmaster用户<wbr>。</p>
+<p>10． helohost<br>这个配置文件定义了当程序qmail-remote和远程邮件系<wbr>统建立连接时所使用的主机名。如果这个配置文件不存在，<wbr>系统将会从配置文件me中读取这个参数值，如果me不存在，qm<wbr>ail-remote将不能正常运行工作。</p>
+<p>11． locals<br>这个配置文件是定义本地邮件域的，在qmail-send处理邮<wbr>件投递时，将会使用locals定义的值和邮件的目标地址进行比<wbr>较，如果相同，系统就会将这个邮件投递到本地交给qmail-<wbr>lspawn来处理。如果一个邮件的目标主机名在locals找<wbr>不到，系统将会把这个邮件投递到远端邮件服务器系统，<wbr>即使这个邮件的目标地址可能是本地邮件系统的。如果locals<wbr>不存在，系统将会从配置文件me中读取这个参数，如果me不存在<wbr>，qmail-send将不能正常运行。</p>
+<p>12． <strong>me</strong><br><strong>这个配置文件是**</strong>qmail<strong><strong>系统十分重要的一个文件，<wbr>如果这个文件不存在，</strong></strong>qmail<strong>**系统将无法运行</strong>。me是用来定义<wbr>本地邮件服务器的主机名的，上面已经介绍到了，<wbr>有多个配置文件是和me有关联的，<wbr>如果那些配置文件不存在系统默认会从me中读取参数值的。me这<wbr>个配置文件一般都是在qmail系统安装时使用configur<wbr>e-fast来创建的，在上面qmail系统安装的时候已经使用<wbr>过了这个参数。</p>
+<p>13． queuelifetime<br>这个配置文件是定义一个邮件在邮件队列中存活的时间，缺省值为7<wbr>天(604800s)，这个期限到了以后qmail-send将<wbr>会进行最后一次的投递尝试，如果投递失败，<wbr>该邮件将会从邮件队列中删除。</p>
+<p>14． <strong>rcphosts </strong><br>这个配置文件也是qmail一个十分重要的文件，<wbr>这个文件是定义系统允许转发邮件的邮件域，<wbr>如果这个文件不存在或者为空，你的系统将会接收Internet<wbr>上所有域的邮件转发，即你的系统是Open relay。配置文件rcpthosts最多可以支持50个主机<wbr>名和域名，如果超个这个数字，就需要保存到他的扩充配置文件mo<wbr>rercphosts中，然后使用qmail的命令程序qmai<wbr>l-newmrh(在本系统中，该文件在/var/qmail/<wbr>bin目录下)来生成二进制的morercpthosts.<wbr>cdb文件，这样qmail-smtpd才可以从这个二进制文件<wbr>中读取信息。</p>
+<p>15．<strong> virtualdomains </strong><br>这也是qmail的一个非常重要的配置文件，它定义了qmail<wbr>的虚拟邮件域，qmail结合vpopmail的虚拟域管理功能<wbr>可以定义多个虚拟邮件域。</p>
+<p>16． smtproutes<br>这个配置文件是定义qmail邮件系统的静态SMTP路由表信息<wbr>的，他的格式应该是：<br>HOST: targetHOST   //HOST可以是主机名或者域名。<wbr>这行所表示的是意思是将所有目标是HOST的邮件转发到targ<wbr>etHOST邮件服务器中，这个是最常规的表示方式。<br>下面给一些例子和一些特殊的表示方法：<br>cnunix.com.cn:cnunix.com   //这行表示的意思是将所有发往cnunix.com.cn的邮<wbr>件全部转发到cnunix.com这个邮件服务器。qmail不<wbr>会在cnunix.com.cn邮件服务器中投递时查询DNS中<wbr>的MX记录，直接投递到cnunix.com邮件服务器中，<wbr>加快了投递的速度。<br>.cnunix.net:     //这行表示强迫qmail对DNS的MX记录进行查询，<wbr>因为没有定义转发的主机名，qmail将在DNS中查询任何以.<wbr>cnunix.net结尾的邮件服务器<br>：mail.cnunix.com.cn:2525   //这行定义表示所有发往该机器的所有邮件都将会转发到mail<wbr>.cnunix.com.cn这个邮件服务器，并且转发到对方的<wbr>2525端口，这个方式一般都是做邮件网关时用的到的。</p>
+<p>注意：smtproutes如果设置不正确或者DNS的变动会产<wbr>生邮件的循环投递。</p>
+<p>17． timeoutconnect<br>这个配置文件定义了qmail-remote在和远端SMTP服<wbr>务器在SMTP连接断开以前接受一个新的连接等待的最大时间(单<wbr>位为秒s),默认值为一分钟(60s)。<wbr>如果你的网络连接速率比较低，<wbr>就需要相应的调整这个参数到一个适合的值。</p>
+<p>18． timeoutremote<br>这个配置文件定义了qmail-remote等待远端的SMTP<wbr>服务器相应时等待的最大时间，默认值为20分钟(1200s),<wbr>如果到达这个最大值没有响应，qmail与对方断开连接并且把失<wbr>败的记录写到qmail的日志中。</p>
+<p>19． smtpgreeting<br>这个配置文件定义了用户在登录SMTP服务时显示的系统欢迎信息<wbr>。修改这个信息可以掩盖一些你的系统的本身的信息，<wbr>可以相对的迷惑一下登录者。</p>
+<p>解决qmail DNS的问题：<br>qmail 1.03版本有个很龌龊的问题，就是默认情况下，qmail无法<wbr>处理长度超过512字节的DNS响应包。这个错误出现在qmai<wbr>l的dns.c原码中，其中的DNS包的最大值被设置为512了<wbr>。qmail 的开发者写了个补丁程序放到这个dns.c目录文件中，<wbr>就可以避免这个问题。<br>这里我门采用更简单直接的办法修改dns.c源码，在dns.c<wbr>文件的第24行<br>static union{ HEADER hdr; unsigned char buf[PACKETSZ]; }response;<br>编译代码前，把这里的PACKETSZ的值改为65536就可以<wbr>避免这个问题。</p>
+<p>编译qmail 源码：<br>一但你安置前面的说明配置完你的配置文件，就可以对qmail进<wbr>行编译了。在qmail-1.03目录下键入：make setup check 就可以编译了。</p>
+<p>Qmail的基本结构。<br>编译安装完qmail后，会在你的安装目录下生成下面这些目录。<br>alias       包含qmail别名文件<br>bin        包含所有qmail可执行文件<br>boot       包含在不同邮件环境下启动的qmail脚本<br>control     包含qmail所有配置控制文件<br>doc        包含qmail文档文件<br>man       包含qmail帮助文件<br>queue     包含qmail邮件队列目录<br>users      包含为qmail-lspawn创建任何qmail用<wbr>户数据库。</p>
+<p>运行ps命令可以查看到qmail的相关进程：</p>
+<h1 id="ps_–ax_|_grep_qmail">ps –ax | grep qmail</h1><p>下面介绍几个主要的qmail程序的用途。 这些配置文件都在qmail的control目录中，<wbr>一般位于位于/var/qmail/control目录中。</p>
+<p>1. qmail-clean 用来从邮件队列中将那些看起来已经投送失败的未发送消息删除掉。 qmail使用多种状态标示来标记邮件，<wbr>每个邮件在每一次被处理后它的状态表示都会被改变。<wbr>如果系统当机，系统重新启动以后，qmail-send仍然可以<wbr>找到邮件队列中上次最后一次成功处理过的邮件的位置，<wbr>并且从这里重新开始处理邮件队列。如果由于其他原因造成qmai<wbr>l-send不能处理的邮件队列，qmail-send会调用q<wbr>mail-clean从邮件队列中删除邮件。qmail-<wbr>clean也是常驻内存的进程。</p>
+<p>2. qmail-inject 用来把新的消息插入到邮件队列中去。在邮件传递给qmail-<wbr>queue之前，qmail-inject先扫面邮件的邮件头，<wbr>来查看邮件头是否符合RFC822标准，<wbr>如果不符合它将会自动的更改和修正这个邮件的邮件头。</p>
+<p>3. qmail-local 是被qmail用来将消息投送给邮件服务器上的一个本地用户。 这个程序通常是用来检测因为转发命令使用不当造成的邮件循环故障<wbr>。</p>
+<p>4. qmail-lspawn 用来调度本地邮件系统上的邮件投送进程的。 是负责目标地址是为本地邮件服务器的邮件。</p>
+<p>5. qmail-pop3 是一个pop3服务程序的qmail版本，它允许远程客户使用P<wbr>OP协议直接连接到qmail邮件服务器并阅读他们的信息。<wbr>这个程序工作在qmail 在Maildir邮箱格式下。</p>
+<p>6. qmail-popup 是用在与qmail-pop3d程序的连接上的。Qmail-<wbr>popup程序在激活qmail-pop3d程序前，验证pop<wbr>3连接的pop用户id和密码。</p>
+<p>7. qmail-qmtpd 用来接收来自远程客户端的qmail连接的。一但请求接收到，<wbr>任何接收到的消息都会被传送给qmai-queue程序插入到q<wbr>mail邮件队列中。</p>
+<p>8. qmail-queue 用来处理来自qmail-inject 和 qmail-smtpd程序的邮件消息。<wbr>并将他们移到一个邮件队列中等待发送。</p>
+<p>9. qmail-remote程序是用来把邮件消息投送给远程目的邮<wbr>件主机。</p>
+<p>10. qmail-rspawn是被qmail-send程序调用，<wbr>他用在将消息传送给远程邮件服务器上的用户时。 当qmail-send判明邮件目标地址是远端邮件服务器时，q<wbr>mail-send就会将邮件交给qmail-rspawn，q<wbr>mail-rspawn的作用是调度邮件的投递时间和顺序，<wbr>然后激活qmail-remote来进行投递。qmail-<wbr>rspawn还有一个作用是决定每一个邮件的目标邮件服务器，<wbr>每次和远端邮件服务器的连接都会调用qmail-remote一<wbr>次。qmail-rspawn也是常驻内存的进程。</p>
+<p>11. qmail-send 用在当消息成功放到邮件队列中后，qmail-send 程序就被调用来处理消息。</p>
+<p>12. qmail-smtpd 用来监听来自远程邮件服务器的网络连接请求。</p>
+<p>13. splogger 用来向系统登陆日志程序插入项的。<br>安装配置实例</p>
+<p>环境：redhat9.0, qmail-1.03, ucspi-tcp-0.88, checkpassword-0.90.</p>
+<p>所需软件包<br>qmail-1.03.tar.gz （<a href="http://www.qmail.org" target="_blank" rel="external">http://www.qmail.org</a>）<br>ucspi-tcp-0_88_tar.gz （<a href="http://cr.yp.to/ucspi-tcp.html" target="_blank" rel="external">http://cr.yp.to/ucspi-tcp.<wbr>html</a>）<br>checkpassword-0_90_tar.gz （<a href="http://cr.yp.to/checkpwd.html" target="_blank" rel="external">http://cr.yp.to/checkpwd.html</a><wbr>）</p>
+<p>1． 卸载SendMail邮件系统<br>由于大多数Linux发行版本中都预装了SendMail邮件系<wbr>统，所以在安装qmail 邮件服务器<br>前最好卸载SendMail邮件服务器，使用如下命令：</p>
+<h1 id="ntsysv_（取消系统boot时启动SendMail）_也可以用setup程序来实现。">ntsysv （取消系统boot时启动SendMail） 也可以用setup程序来实现。</h1><h1 id="mv_/usr/lib/sendmail_/usr/lib/sendmail-bak">mv /usr/lib/sendmail /usr/lib/sendmail.bak</h1><h1 id="mv_/usr/sbin/sendmail_/usr/sbin/sendmail-bak">mv /usr/sbin/sendmail /usr/sbin/sendmail.bak</h1><h1 id="mv_/usr/bin/newaliases_/usr/bin/newaliases-bak">mv /usr/bin/newaliases /usr/bin/newaliases.bak</h1><h1 id="mv_/usr/bin/mailq_/usr/bin/mailq-bak">mv /usr/bin/mailq /usr/bin/mailq.bak</h1><p>2.配置qmail编译前的一些设置。<br>a)先在qmail的控制文件me中写入本地机器的域名<br>echo magicunix.com &gt; /var/qmail/control/me<br>或者<br>./config-fast magicunix.com</p>
+<p>b)建立相应的配置文件，使用如下命令：</p>
+<h1 id="cd_/var/qmail/alias">cd /var/qmail/alias</h1><h1 id="touch_-qmail-postmaster_-qmail-mailer-daemon_-qmail-root">touch .qmail-postmaster .qmail-mailer-daemon .qmail-root</h1><h1 id="chmod_644_-qmail*">chmod 644 .qmail*</h1><p>c)给root用户建立个别名用户alias<br>echo alias &gt; /var/qmail/alias/.qmail-root<br>( 这里我把用户alias作为root 用户的别名)</p>
+<p>d)配置qmail的主目录<br>这里采用qmail默认目录，所以不需要修改任何地方。</p>
+<p>e)设置qmail系统用户组：</p>
+<h1 id="cd_/usr/sbin/">cd /usr/sbin/</h1><h1 id="-/groupadd_nofiles">./groupadd nofiles</h1><h1 id="-/groupadd_qmail">./groupadd qmail</h1><p>f)设置qmail系统用户：</p>
+<h1 id="cd_/usr/sbin/-1">cd /usr/sbin/</h1><h1 id="-/useradd_-g_nofiles_-d_/var/qmail/alias_alias">./useradd -g nofiles -d /var/qmail/alias alias</h1><h1 id="-/useradd_-g_nofiles_-d_/var/qmail_qmaild">./useradd -g nofiles -d /var/qmail qmaild</h1><h1 id="-/useradd_-g_nofiles_-d_/var/qmail_qmaill">./useradd -g nofiles -d /var/qmail qmaill</h1><h1 id="-/useradd_-g_nofiles_-d_/var/qmail_qmailp">./useradd -g nofiles -d /var/qmail qmailp</h1><h1 id="-/useradd_-g_qmail_-d_/var/qmail_qmailq">./useradd -g qmail -d /var/qmail qmailq</h1><h1 id="-/useradd_-g_qmail_-d_/var/qmail_qmailr">./useradd -g qmail -d /var/qmail qmailr</h1><h1 id="-/useradd_-g_qmail_-d_/var/qmail_qmails">./useradd -g qmail -d /var/qmail qmails</h1><p>g)解决qmail源码的几个问题：<br>DNS问题：<br>在dns.c文件的第24行<br>static union{ HEADER hdr; unsigned char buf[PACKETSZ]; }response;<br>把这里的PACKETSZ的值改为65536。</p>
+<p>编译时出现errno没有定义的错误问题：<br>在qmail原代码里的error.h文件的头部填加一条：#<wbr>include</p>
+<p>3． 安装qmail软件包<br>a）手工创建/var/qmail目录。</p>
+<h1 id="mkdir_/var/qmail">mkdir /var/qmail</h1><p>b) 编译qmail源代码并安装，使用如下命令：</p>
+<h1 id="tar_zxvf_qmail-1-03-tar-gz">tar zxvf qmail-1.03.tar.gz</h1><h1 id="cd_qmail-1-03">cd qmail-1.03</h1><h1 id="make_setup_check">make setup check</h1><p>c) 选择邮件的存储方式：<br>这里采用$(HOME)/Maildir 方式</p>
+<h1 id="cp_/var/qmail/boot/home_/var/qmail/rc">cp /var/qmail/boot/home /var/qmail/rc</h1><p>执行完rc内的内容应该为：</p>
+<h1 id="!/bin/sh">!/bin/sh</h1><h1 id="Using_splogger_to_send_the_log_through_syslog-">Using splogger to send the log through syslog.</h1><h1 id="Using_qmail-local_to_deliver_messages_to_~/Mailbox_by_default-">Using qmail-local to deliver messages to ~/Mailbox by default.</h1><p>exec env - PATH=”/var/qmail/bin:$PATH” \<br>qmail-start ./Maildir splogger qmail<br>4. 建立启动qmail的shell文件start.sh，<wbr>其内容为：</p>
+<h1 id="cat_&gt;_start-sh">cat &gt; start.sh</h1><p>csh -cf ‘/var/qmail/rc &amp;’</p>
+<p>5． 添加Pop3和SMTP服务<br>可以使用xinetd超级服务器或TcpServer来建立相应<wbr>的Pop3和SMTP服务，为了支持大容量的邮件用户，建议使用<wbr>TcpServer来监听服务端口启动相应的服务，<wbr>建立命令如下：</p>
+<h1 id="tar_zxvf_ucspi-tcp-0_88_tar-gz">tar zxvf ucspi-tcp-0_88_tar.gz</h1><h1 id="cd_ucspi-tcp-0-88">cd ucspi-tcp-0.88</h1><h1 id="make_setup_check-1">make setup check</h1><p>如果编译出现没有定义errno的错误，在原文件的error.<wbr>h文件头部填加：#include</p>
+<h1 id="tar_zxvf_checkpassword-0_90_tar-gz">tar zxvf checkpassword-0_90_tar.gz</h1><h1 id="cd_checkpassword-0-90">cd checkpassword-0.90</h1><h1 id="make_setup_check-2">make setup check</h1><p>如果编译出现没有定义errno的错误，在原文件的error.<wbr>h文件头部填加：#include</p>
+<p>建立tcpserver规则数据库：</p>
+<h1 id="cd_/usr/local/bin/">cd /usr/local/bin/</h1><h1 id="cat_&gt;_rules-txt">cat &gt; rules.txt</h1><p>192.168. : allow, RELAYCLIENT=””<br>192.168.1.10: deny<br>192.168.2. :deny<br>:deny<br>#</p>
+<h1 id="at_rules-txt_|_tcprules_rules-cdb_rules-tmp">at rules.txt | tcprules rules.cdb rules.tmp</h1><p>修改上面建立的启动脚本start.sh文件，<wbr>修改后的内容如下：</p>
+<h1 id="cat_start-sh">cat start.sh</h1><p>csh -cf ‘/var/qmail/rc &amp;’<br>tcpserver -u 502 -g 501 -c 100 -x /usr/local/bin/rules.cdb 0 smtp /var/qmail/bin/qmail-smtpd &amp;<br>tcpserver -c 100 0 pop3 /var/qmail/bin/qmail-popup magicunix.com /bin/checkpassword /var/qmail/bin/qmail-pop3d ./Maildir/ &amp;<br>(注意: 最后一个参数必须和/var/qmail/rc中的qmail-<wbr>start的第一个参数一致，比如<br>qmail-start ./Maildir/ splogger qmail )</p>
+<p>修改/var/qmail/control/rcpthosts<wbr>文件，来增加SMTP接收邮件的域<br>例如：</p>
+<h1 id="cat_/var/qmail/control/rcpthosts">cat /var/qmail/control/rcpthosts</h1><p>magicunix.com<br>hryj.com.cn<br>sina.com.cn<br>openet.com.cn</p>
+<p>6． 启动qmail进程<br>a)启动qmail</p>
+<h1 id="cd_/var/qmail">cd /var/qmail</h1><h1 id="-/start-sh">./start.sh</h1><p>b)检察qmail个进程是否启动正常：</p>
+<h1 id="ps_-ef_|_grep_qmail">ps -ef | grep qmail</h1><p>qmails 29052 29051 0 Aug23 ? 00:00:00 [qmail-send]<br>qmaill 29055 29052 0 Aug23 ? 00:00:00 [splogger]<br>root 29056 29052 0 Aug23 ? 00:00:00 qmail-lspawn ./Maildir<br>qmailr 29057 29052 0 Aug23 ? 00:00:00 [qmail-rspawn]<br>qmailq 29058 29052 0 Aug23 ? 00:00:00 [qmail-clean]</p>
+<p>c)检查smtp是否已经开起：</p>
+<h1 id="telnet_localhost_25">telnet localhost 25</h1><p>Trying 127.0.0.1…<br>Connected to LINUX-SERVER (127.0.0.1).<br>Escape character is ‘^]’.<br>220 localhost.localdomain ESMTP Sendmail 8.12.8/8.12.8; Wed, 25 Aug 2004 17:44:43 +0800<br>QUIT（输入QUIT可以退出）<br>221 2.0.0 localhost.localdomain closing connection<br>Connection closed by foreign host.<br>#</p>
+<p>检查pop3是否已经开器</p>
+<h1 id="telnet_localhost_110">telnet localhost 110</h1><p>Trying 127.0.0.1…<br>Connected to LINUX-SERVER (127.0.0.1).<br>Escape character is ‘^]’.<br>+OK &lt;4114.1093427217@magicunix.com<wbr>&gt;<br>QUIT （输入QUIT可以退出）<br>+OK<br>Connection closed by foreign host.<br>#<br>上面情况证明一切正常。</p>
+<p>3．测试<br>a)建立测试用户。<br>为了实现测试，我门需要建立2个测试的系统帐号。</p>
+<h1 id="cd_/usr/sbin/-2">cd /usr/sbin/</h1><h1 id="-/useradd_test1">./useradd test1</h1><h1 id="passwd_test1_(口令为test1)">passwd test1 (口令为test1)</h1><h1 id="-/useradd_test2">./useradd test2</h1><h1 id="passwd_test2_(口令为test2)">passwd test2 (口令为test2)</h1><p>下面分别给用户test1,test2分配Maildir邮箱。<wbr>(注意这里必须用用户权限建立邮箱)</p>
+<h1 id="su_test1">su test1</h1><p>$/var/qmail/bin/maildirmake Maildir<br>$echo ./Maildir &gt; .qmail</p>
+<h1 id="su_test2">su test2</h1><p>$/var/qmail/bin/maildirmake Maildir<br>$echo ./Maildir &gt; .qmail<br>为了使root用户也能收mail?这样给root的别名用户a<wbr>lias也创建个邮箱。</p>
+<h1 id="su_alias">su alias</h1><p>$/var/qmail/bin/maildirmake Maildir<br>$echo ./Maildir &gt; .qmail<br>为了测试远程投送，这里我们引用两个email地址：hlxia<wbr>@0-100.com.cn, xhl_c@hotmail</p>
+<p>b)测试qmail本地投送。<br>首先准备一个RFC822格式的测试文件：</p>
+<h1 id="su_test1-1">su test1</h1><p>$cat &gt; test_mail1<br>to: test2<br>from: test1<br>subject:This is a local test mail.<br>This is a local test mail content …<br>$<br>现在调用qmail-inject发送mail.<br>$cat test_mail1 | /var/qmail/bin/qmail-inject<br>现在检查mail的本地投送是否成功。(//后面的是我的注释)<br>$ telnet localhost 110<br>Trying 127.0.0.1…<br>Connected to LINUX-SERVER (127.0.0.1).<br>Escape character is ‘^]’.<br>+OK &lt;4519.1093427483@magicunix.com<wbr>&gt;<br>user test2 //验证用户名<br>+OK //返回OK说明正确<br>pass test2 //验证用户口令<br>+OK<br>list //列出此用户的邮件列表<br>+OK<br>1 427 //此用户现在一共有3封mail<br>2 424<br>3 424<br>.<br>retr 3 //查看mail 3的内容<br>+OK<br>Return-Path:<br>Delivered-To: test2@magicunix.com<br>Received: (qmail 4462 invoked by uid 0); 25 Aug 2004 09:51:03 -0000<br>Date: 25 Aug 2004 09:51:03 -0000<br>Message-ID: &lt;20040825095103.4461.qmail@<wbr>magicunix.com&gt;<br>to: test2@magicunix.com<br>from: test1@magicunix.com<br>subject:This is local a test mail.</p>
+<p>This is a local test mail content …</p>
+<p>.<br>dele 1 //删除mail 1<br>+OK<br>list //从新查看mail 列表，发现mail已经不存在了。<br>+OK<br>2 424<br>3 424<br>.<br>quit //退出连接。<br>+OK<br>Connection closed by foreign host.</p>
+<p>c)测试qmail远程投送。<br>首先准备一个RFC822格式的测试文件：</p>
+<h1 id="su_test1-2">su test1</h1><p>$cat &gt; test_mail2<br>to: hlxia@0-100.com.cn<br>from: test1<br>subject:This is a desc test mail.<br>This is a desc test mail content …<br>$<br>现在调用qmail-inject发送mail.<br>$cat test_mail2 | /var/qmail/bin/qmail-inject<br>打开<br>hlxia@0-100.com.cn信箱查看是否收到test<wbr>1发的mail.</p>
+<p>d)测试qmail别名投送。<br>首先准备一个RFC822格式的测试文件：</p>
+<h1 id="su_test1-3">su test1</h1><p>$cat &gt; test_mail3<br>to: root<br>from: test1<br>subject:This is a alias test mail.<br>This is a alias test mail content …<br>$<br>现在调用qmail-inject发送mail.<br>$cat test_mail3 | /var/qmail/bin/qmail-inject<br>检查alias用户是否收到发给root用户的mail</p>
+<h1 id="su_alias-1">su alias</h1><p>$cd ~<br>$cd Madir/new<br>1093427463.4465.LINUX-SERVER<br>说明已经收到了。也可以用telnet localhost 110来打开mail，这里就不做了，具体请参考本地投送那节。</p>
+<p>e)测试qmail群发。<br>首先准备一个RFC822格式的测试文件：</p>
+<h1 id="su_test1-4">su test1</h1><p>$cat &gt; test_mail4<br>to: postmaster<br>from: test1<br>subject:This is a postmaster test mail.<br>This is a postmaster test mail content …<br>$<br>现在调用qmail-inject发送mail.<br>$cat test_mail4 | /var/qmail/bin/qmail-inject</p>
+<p>现在检查/var/qmail/alias/.qmail-<wbr>postmaster文件里有多少个别名<br>test1<br>test2<br>alias<br>hlxia<br>有4个用户，下面分别检查这4个用户是否都收到刚才发的test<wbr>_mail4</p>
+<p>f)用foxmail测试pop3是否工作正常。<br>找台能连接到主机的win机器，按下列方法配置foxmail:<br>电子邮件地址：test2@magicunix.com<br>SMTP：magicunix.com<br>POP3：magicunix.com<br>然后测试连接。如果一切正常，就可以连接上了。然后收一下mai<wbr>l，正常可以发现，2封刚才发送的mail，一个是test1用<wbr>户发送给test2的，一个是test1群发的。<br>g)测试tcpserver的规则数据库过滤smtp的功能。<br>简单的tcpserver规则数据库创建及使用方法一节中有详细<wbr>的说明，可以参照说明进行测试，这里我就不在重复实现了。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2013/04/12/qmail排错集锦/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          qmail排错集锦
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/04/12/qmail运行程序基本介绍/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">qmail运行程序基本介绍</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="qmail基本工作原理" data-title="qmail基本工作原理" data-url="http://yoursite.com/2013/04/12/qmail基本工作原理/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Edison
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/mobile.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  </div>
+</body>
+</html>

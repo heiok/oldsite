@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>qmail邮件服务器之垃圾邮件清除 | 网络蝙蝠侠部落</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="环境:Debian 3.1 (Linux version 2.4.27)+netqmail-1.05+vpopmail
+    于半个多月开始接手前任留下的qmail邮件服务器,此前一直没碰过linux方面的邮件服务器,这一次可以说是逼不得已.由于前任管理员当初也是由新手做起的这个邮件服务器,一直没什么大故障.所以一些东东他也不是十分清楚.看来稳定也不一定是好事…呵.因为前一段时间qmail服务器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="qmail邮件服务器之垃圾邮件清除">
+<meta property="og:url" content="http://yoursite.com/2010/06/22/qmail邮件服务器之垃圾邮件清除/index.html">
+<meta property="og:site_name" content="网络蝙蝠侠部落">
+<meta property="og:description" content="环境:Debian 3.1 (Linux version 2.4.27)+netqmail-1.05+vpopmail
+    于半个多月开始接手前任留下的qmail邮件服务器,此前一直没碰过linux方面的邮件服务器,这一次可以说是逼不得已.由于前任管理员当初也是由新手做起的这个邮件服务器,一直没什么大故障.所以一些东东他也不是十分清楚.看来稳定也不一定是好事…呵.因为前一段时间qmail服务器">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="qmail邮件服务器之垃圾邮件清除">
+<meta name="twitter:description" content="环境:Debian 3.1 (Linux version 2.4.27)+netqmail-1.05+vpopmail
+    于半个多月开始接手前任留下的qmail邮件服务器,此前一直没碰过linux方面的邮件服务器,这一次可以说是逼不得已.由于前任管理员当初也是由新手做起的这个邮件服务器,一直没什么大故障.所以一些东东他也不是十分清楚.看来稳定也不一定是好事…呵.因为前一段时间qmail服务器">
+  
+    <link rel="alternative" href="/atom.xml" title="网络蝙蝠侠部落" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Edison</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="/#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/FTP/" style="font-size: NaNpx;">FTP</a><a href="/tags/TCP-IP/" style="font-size: NaNpx;">TCP/IP</a><a href="/tags/WIN8/" style="font-size: NaNpx;">WIN8</a><a href="/tags/explorer/" style="font-size: NaNpx;">explorer</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Edison</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="">
+				<hgroup>
+				  <h1 class="header-author">Edison</h1>
+				</hgroup>
+			</div>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="/#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-qmail邮件服务器之垃圾邮件清除" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2010/06/22/qmail邮件服务器之垃圾邮件清除/" class="article-date">
+  	<time datetime="2010-06-22T04:17:30.000Z" itemprop="datePublished">2010-06-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      qmail邮件服务器之垃圾邮件清除
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/维护日志/">维护日志</a><a class="article-category-link" href="/categories/维护日志/网络学堂/">网络学堂</a><a class="article-category-link" href="/categories/维护日志/网络学堂/网络安全/">网络安全</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><span style="color: #000000; font-family: 宋体; font-size: small;">环境:Debian 3.1 (Linux version 2.4.27)+netqmail-1.05+vpopmail</span></p>
+<p><span style="color: #000000; font-family: 宋体; font-size: small;">    于半个多月开始接手前任留下的qmail邮件服务器,此前一直没碰过linux方面的邮件服务器,这一次可以说是逼不得已.由于前任管理员当初也是由新手做起的这个邮件服务器,一直没什么大故障.所以一些东东他也不是十分清楚.看来稳定也不一定是好事…呵.因为前一段时间qmail服务器就老是死机,要不就是发送邮件缓慢,或发送邮件时出现”SMTP服务器已经60秒内没有响应了。是否继续等待”之类的消息,因为无法从远端登录,只能跑到机房重启.邮件收发恢复正常,但想想长此以往也不是个办法,便在这半个多月里恶补了qmail方面的知识,在虚拟机环境里实践好在服务器上实施了以下过程.自查出发现有垃圾邮件后,打算用qmail-remove来解决,无奈由于内核版本的原因,无法在上面安装.不过还好,原来用几条命令就可以搞掂.</span></p>
+<a id="more"></a>
+<p><span style="color: #000000; font-family: 宋体; font-size: small;">    因为我不知道邮件列表里是否有正常邮件….太多了,列表里几万封邮件,查看了一下,邮件内容都是一样的且与本公司无关.但为了安全起见,我还特地观察了两天,在badmailfrom里添加了垃圾制造者的邮件地址后,近两天时间里,qmail邮件列表里的邮件由64854封逐渐减少为59463封,且数量没有再往上增长.说明badmailfrom还是起到了一定的作用.而且还将其中一个可疑的邮箱账户的密码进行了更改.也许有网友会问:如何查找垃圾制造者? 这个我只能告诉你自己去检查日志,去分析.smtpd里的日志,qmail里的日志.都仔细查看一次,观察.</span></p>
+<p><span style="color: #000000; font-family: 宋体; font-size: small;">     为了清理垃圾邮件.特地找了一个假日来做这件事,安全起见(避免误删正常邮件啊~~~)</span></p>
+<p><span style="color: #000000; font-family: 宋体; font-size: small;">     清理过程记录(没什么技术含量,高手略过)</span></p>
+<p>cd  /var/qmail/queue</p>
+<p>mail:/var/qmail/queue# ls -l<br>total 328<br>drwx———   2 qmails qmail 299008 2010-06-16 15:50 bounce<br>drwx———  25 qmails qmail   4096 2006-11-17 18:00 info<br>drwx———   2 qmailq qmail   4096 2010-06-16 15:50 intd<br>drwx———  25 qmails qmail   4096 2006-11-17 18:00 local<br>drwxr-x—-   2 qmailq qmail   4096 2006-11-17 18:00 lock<br>drwxr-x—-  25 qmailq qmail   4096 2006-11-17 18:00 mess<br>drwx———   2 qmailq qmail   4096 2010-06-16 15:50 pid<br>drwx———  25 qmails qmail   4096 2006-11-17 18:00 remote<br>drwxr-x—-   2 qmailq qmail   4096 2010-06-16 15:50 todo</p>
+<p>mail:/var/qmail/queue# qmailctl stat<br>/service/qmail-send: up (pid 995) 196002 seconds<br>/service/qmail-send/log: up (pid 996) 196002 seconds<br>/service/qmail-smtpd: up (pid 991) 196002 seconds<br>/service/qmail-smtpd/log: up (pid 992) 196002 seconds<br>messages in queue: 59430 (<span style="color: #ff0000;">这就是垃圾邮件</span>)<br>messages in queue but not yet preprocessed: 3</p>
+<p>cd /var/qmail/queue/lock</p>
+<p>mail:/var/qmail/queue/lock# ls -l<br>total 4<br>-rw———-  1 qmails qmail    0 2006-11-17 18:19 sendmutex<br>-rw-r—r—  1 qmailr qmail 1024 2010-06-16 15:51 tcpto<br>prw—w—w-  1 qmails qmail    0 2010-06-16 15:51 trigger</p>
+<p>mail:/var/qmail/queue# <span style="color: #ff8040;"><strong>mv /var/qmail/queue/lock /var/qmail/</strong></span></p>
+<p>mail:/var/qmail/queue# ls -l<br>total 324<br>drwx———   2 qmails qmail 299008 2010-06-16 15:52 bounce<br>drwx———  25 qmails qmail   4096 2006-11-17 18:00 info<br>drwx———   2 qmailq qmail   4096 2010-06-16 15:53 intd<br>drwx———  25 qmails qmail   4096 2006-11-17 18:00 local<br>drwxr-x—-  25 qmailq qmail   4096 2006-11-17 18:00 mess<br>drwx———   2 qmailq qmail   4096 2010-06-16 15:53 pid<br>drwx———  25 qmails qmail   4096 2006-11-17 18:00 remote<br>drwxr-x—-   2 qmailq qmail   4096 2010-06-16 15:52 todo</p>
+<p>mail:/var/qmail/queue# <strong><span style="color: #ff8040;">find /var/qmail/queue/ -type f -exec rm {} \;<br></span></strong>(<span style="color: #ff0000;">由于邮件太多,这里费时很长,我中间ctrl+c断一下,查看当前qmail状态</span>)</p>
+<p>mail:/var/qmail/queue# qmailctl stat<br>/service/qmail-send: up (pid 995) 196072 seconds<br>/service/qmail-send/log: up (pid 996) 196072 seconds<br>/service/qmail-smtpd: up (pid 991) 196072 seconds<br>/service/qmail-smtpd/log: up (pid 992) 196072 seconds<br>messages in queue: 44672 (<span style="color: #ff0000;">看,被删除了好多,之前两天自动清除太慢了</span>)<br>messages in queue but not yet preprocessed: 3</p>
+<p>继续</p>
+<p>mail:/var/qmail/queue# find /var/qmail/queue/ -type f -exec rm {} \;</p>
+<p>干净了,请看:</p>
+<p>mail:/var/qmail/queue# qmailctl stat<br>/service/qmail-send: up (pid 995) 196481 seconds<br>/service/qmail-send/log: up (pid 996) 196481 seconds<br>/service/qmail-smtpd: up (pid 991) 196481 seconds<br>/service/qmail-smtpd/log: up (pid 992) 196481 seconds<br>messages in queue: 0<br>messages in queue but not yet preprocessed: 0</p>
+<p><span style="color: #000000; font-family: 宋体; font-size: small;">别忘了把lock文件夹移回原处,不然的话qmail会运行不正常.</span></p>
+<p>mail:/var/qmail/queue# <span style="color: #ff8040;"><strong>mv /var/qmail/lock /var/qmail/queue/</strong></span></p>
+<p><span style="color: #000000; font-family: 宋体; font-size: small;">最后测试了一下垃圾清除后的邮件收发都没问题,但用netstat –n 与 ps –ef | grep qmail 查看发现,进程里还有几个进程残留.看准PID,后来kill掉了.</span></p>
+<p><span style="color: #000000; font-family: 宋体; font-size: small;">还好,整个过程没出什么差错.清除垃圾后至今运行了一个多星期感觉良好.没再出什么故障…</span></p>
+<p><span style="color: #404040;"> </span></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2010/12/09/利用devcon实现USB设备重新加载/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          利用devcon实现USB设备重新加载
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2010/02/04/教你去掉word空白页/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">教你去掉word空白页</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="qmail邮件服务器之垃圾邮件清除" data-title="qmail邮件服务器之垃圾邮件清除" data-url="http://yoursite.com/2010/06/22/qmail邮件服务器之垃圾邮件清除/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Edison
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/mobile.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  </div>
+</body>
+</html>

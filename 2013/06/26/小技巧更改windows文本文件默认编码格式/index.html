@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>小技巧更改windows文本文件默认编码格式 | 网络蝙蝠侠部落</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在日常使用Windows文本文件过程中，本文以Windows记事本.txt文件格式为例。默认情况下都是以ANSI编码保存，如果需要保存为其他编码，则需要你手动选择，造成一定的不便。比如我用的繁体WIN7，用记事本保存中文时会乱码，每次都要手动选择编码UTF-8。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小技巧更改windows文本文件默认编码格式">
+<meta property="og:url" content="http://yoursite.com/2013/06/26/小技巧更改windows文本文件默认编码格式/index.html">
+<meta property="og:site_name" content="网络蝙蝠侠部落">
+<meta property="og:description" content="在日常使用Windows文本文件过程中，本文以Windows记事本.txt文件格式为例。默认情况下都是以ANSI编码保存，如果需要保存为其他编码，则需要你手动选择，造成一定的不便。比如我用的繁体WIN7，用记事本保存中文时会乱码，每次都要手动选择编码UTF-8。">
+<meta property="og:image" content="http://www.heiok.com/wordpress/wp-content/uploads/2013/06/reg-code.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小技巧更改windows文本文件默认编码格式">
+<meta name="twitter:description" content="在日常使用Windows文本文件过程中，本文以Windows记事本.txt文件格式为例。默认情况下都是以ANSI编码保存，如果需要保存为其他编码，则需要你手动选择，造成一定的不便。比如我用的繁体WIN7，用记事本保存中文时会乱码，每次都要手动选择编码UTF-8。">
+  
+    <link rel="alternative" href="/atom.xml" title="网络蝙蝠侠部落" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Edison</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="/#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/FTP/" style="font-size: NaNpx;">FTP</a><a href="/tags/TCP-IP/" style="font-size: NaNpx;">TCP/IP</a><a href="/tags/WIN8/" style="font-size: NaNpx;">WIN8</a><a href="/tags/explorer/" style="font-size: NaNpx;">explorer</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Edison</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="">
+				<hgroup>
+				  <h1 class="header-author">Edison</h1>
+				</hgroup>
+			</div>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="/#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-小技巧更改windows文本文件默认编码格式" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2013/06/26/小技巧更改windows文本文件默认编码格式/" class="article-date">
+  	<time datetime="2013-06-26T09:05:44.000Z" itemprop="datePublished">2013-06-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      小技巧更改windows文本文件默认编码格式
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/网络基础/">网络基础</a><a class="article-category-link" href="/categories/网络基础/网络学堂/">网络学堂</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在日常使用Windows文本文件过程中，本文以Windows记事本.txt文件格式为例。默认情况下都是以ANSI编码保存，如果需要保存为其他编码，则需要你手动选择，造成一定的不便。比如我用的繁体WIN7，用记事本保存中文时会乱码，每次都要手动选择编码UTF-8。</p>
+<a id="more"></a>
+<p>大约两年多前我就此问题在某论坛里进行过发贴求助，如何更改windows文本文件默认编码格式，但都没得到结果，其实发现早在2005年的时候都有人有这个需求。都是换编辑器来解决。昨天的时候，在群里，包哥给了个百度知道的链接，照着上面的提示操作，证实可行，贴出来分享下给大伙，方法如下：</p>
+<p>1.在你本地硬盘任意分区建立一个txt文本文件，并将其保存为你需要的编码格式，如：UTF-8。这个文件可以设置为隐藏哦~~~</p>
+<p>2.打开你的注册表编辑器，定位到HKEY_CLASSES_ROOT.txt\ShellNew，在右侧窗口新增“字串值”FileName，内容键值为你第一步建立的文本文件路径与名称，此例中为G:\Chang-Win-Txt-Default-Code.txt 。</p>
+<p><img src="http://www.heiok.com/wordpress/wp-content/uploads/2013/06/reg-code.jpg" alt="更改TXT文件默认编码"></p>
+<p>以上步骤结果不会改变此前本地磁盘内的文件编码，只对改变后的文件编码格式有效。Win7 64位繁体与WinXP sp3简体测试通过。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2013/07/08/DDWRT打造5个LAN口路由器/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          DDWRT打造5个LAN口路由器
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/06/17/推荐一个网络知识搜索引擎/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">推荐一个网络知识搜索引擎</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="小技巧更改windows文本文件默认编码格式" data-title="小技巧更改windows文本文件默认编码格式" data-url="http://yoursite.com/2013/06/26/小技巧更改windows文本文件默认编码格式/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Edison
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/mobile.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  </div>
+</body>
+</html>
