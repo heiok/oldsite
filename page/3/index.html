@@ -191,239 +191,6 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-qmail排错集锦" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2013/04/12/qmail排错集锦/" class="article-date">
-  	<time datetime="2013-04-11T23:11:21.000Z" itemprop="datePublished">2013-04-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/04/12/qmail排错集锦/">qmail排错集锦</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="qmail排错集锦">qmail<strong>排错集锦</strong></h2><p>1.虚拟域用户无法收信？</p>
-<p>Q：虚拟域为qmail.com，向fish@qmail.com用户发送邮件，邮件接收失败。查看/var/log/qmail/send/current，发现”_no_mailbox_here_by_that_name”的错误提示。</p>
-<p>A：进入/var/qmail/control/目录，编辑locals文件，将qmail.com条目删除即可。</p>
-<p>当locals和virtualdomains这两个文件同时记录了一个相同域名时，虚拟域将接收不了邮件，因为locals文件优先级高。</p>
-<p>另外，如果/var/qmail/control/rcpthosts文件内的格式不正确也会发生此问题。</p>
-<p>正确格式：”domain.com”</p>
-<p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/服务器篇/">服务器篇</a><a class="article-category-link" href="/categories/服务器篇/系统应用/">系统应用</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2013/04/12/qmail排错集锦/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-qmail基本工作原理" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2013/04/12/qmail基本工作原理/" class="article-date">
-  	<time datetime="2013-04-11T23:06:49.000Z" itemprop="datePublished">2013-04-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/04/12/qmail基本工作原理/">qmail基本工作原理</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="qmail基本工作原理"><strong>qmail基本工作原理</strong></h2><p><strong>qmail**</strong>邮件投递工作基本原理**：qmail-inject负责<wbr />接收本地邮件用户投递的邮件，qmail-smtpd负责接收远<wbr />端邮件用户投递的邮件，交给程序qmail-queue处理后放<wbr />入邮件队列，qmail-send会依次检查邮件队列中的状态，<wbr />如果邮件的状态是投递永久失败，qmail-send会调用qm<wbr />ail-clean将邮件从邮件队列中删除，<wbr />如果邮件状态是没有投递过或者是暂时失败，qmail-send<wbr />会把投递到本地邮件服务器的邮件传递给qmail-lspawn<wbr />，把投递到远程邮件服务器的邮件传递给qmail-rspawn<wbr />，qmail-lspawn会调度邮件投递的序列和时间，然后让<wbr />qmail-local将邮件投递到本地邮件用户的邮箱中，qm<wbr />ail-rspawn也会调度邮件的投递序号和时间，然后调用q<wbr />mail-remote将邮件投递到远端用户的邮箱中。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/网络基础/">网络基础</a><a class="article-category-link" href="/categories/网络基础/网络学堂/">网络学堂</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2013/04/12/qmail基本工作原理/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-qmail运行程序基本介绍" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2013/04/12/qmail运行程序基本介绍/" class="article-date">
-  	<time datetime="2013-04-11T23:03:49.000Z" itemprop="datePublished">2013-04-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/04/12/qmail运行程序基本介绍/">qmail运行程序基本介绍</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>qmail运行程序基本介绍</strong></p>
-<p><strong>『**</strong>qmail<strong><strong>的运行程序』</strong></strong> **</p>
-<p>qmail是一个模块化设计的邮件系统，每一个子功能都是由一个运行程序来实现的，而每个程序的属性以及运行方式由一个或多个配置文件和环境变量来控制的。在qmail安装成功和启动以后，qmail的相关进程一直在内存中驻留，qmail会不断扫描邮件队列，并且把邮件投递到正确的目的地址。<br>运行ps命令可以查看到qmail的相关进程：</p>
-<h1 id="ps_–ax_|_grep_qmail">ps –ax | grep qmail</h1><p>0:00.00 grep qmail<br>23282 con- I 0:00.77 qmail-send<br>23289 con- I 0:00.21 splogger qmail<br>23290 con- I 0:00.13 qmail-lspawn ./Mialdir/<br>23291 con- I 0:00.03 qmail-rspawn<br>23292 con- I 0:00.05 qmail-clean<br>qmail所有的运行程序都安装在/var/qmail/bin目录下。比较重要的运行程序如下：</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/网络学堂/">网络学堂</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2013/04/12/qmail运行程序基本介绍/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-DD-WRT–让我们的无线路由器用上Linux" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2013/04/10/DD-WRT–让我们的无线路由器用上Linux/" class="article-date">
-  	<time datetime="2013-04-09T19:45:05.000Z" itemprop="datePublished">2013-04-10</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/04/10/DD-WRT–让我们的无线路由器用上Linux/">DD-WRT–让我们的无线路由器用上Linux</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="DD-WRT–让我们的无线路由器用上Linux"><strong>DD-WRT–让我们的无线路由器用上Linux</strong></h2><p>相信许多爱折腾路由器固件的读者也许都听说过Linux操作系统，知道它是和Windows抗衡的另一大流派的操作系统。但也许你不知道，Linux的灵活，不仅可以运行在大型服务器、台式机之上，也可以运行在各种小型终端设备，这其中就包括无线路由器。DD-WRT其实就是一个供无线路由器使用的嵌入版Linux，它可以在普通的家用无线路由器实现数千元的商用无线路由器功能，不仅如此，对于高手它甚至可以允许自行编译程序，自由扩展无线路由器功能。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/网络基础/">网络基础</a><a class="article-category-link" href="/categories/网络基础/网络学堂/">网络学堂</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2013/04/10/DD-WRT–让我们的无线路由器用上Linux/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
     <article id="post-Adobe Reader 各个版本直接下载链接" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -882,9 +649,235 @@
 
 
   
+    <article id="post-苹果产品、IPAD序列号查询" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2011/11/02/苹果产品、IPAD序列号查询/" class="article-date">
+  	<time datetime="2011-11-01T21:36:40.000Z" itemprop="datePublished">2011-11-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/11/02/苹果产品、IPAD序列号查询/">苹果产品、IPAD序列号查询</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="苹果产品、IPAD序列号查询">苹果产品、IPAD序列号查询</h2><p><a href="https://selfsolve.apple.com/agreementWarrantyDynamic.do" title="https://selfsolve.apple.com/agreementWarrantyDynamic.do" target="_blank" rel="external">https://selfsolve.apple.com/agreementWarrantyDynamic.do</a></p>
+<p>框框里输入设备序列号，点击右边Continue</p>
+<p>如何查找苹果产品序列号或其他信息，请浏览以下网址：</p>
+<p><a href="http://support.apple.com/kb/HT1349" title="http://support.apple.com/kb/HT1349" target="_blank" rel="external">http://support.apple.com/kb/HT1349</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/维护日志/">维护日志</a><a class="article-category-link" href="/categories/维护日志/网站/">网站</a><a class="article-category-link" href="/categories/维护日志/网站/网络维护/">网络维护</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-查询MAC生产厂商信息" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2011/06/23/查询MAC生产厂商信息/" class="article-date">
+  	<time datetime="2011-06-22T18:10:29.000Z" itemprop="datePublished">2011-06-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/06/23/查询MAC生产厂商信息/">查询MAC生产厂商信息</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>日常网络维护常会碰到知道局域网内IP与MAC信息，但无法得知相应主机位置。如果平时若有做相关登记还好，没有的话，真是头大。主机数量不多且主机所用网卡类型不全一致的话，其实我们可以通过查询网卡的MAC信息来确定主机的大概位置。<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/网络基础/">网络基础</a><a class="article-category-link" href="/categories/网络基础/网络学堂/">网络学堂</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2011/06/23/查询MAC生产厂商信息/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-关于在office excel中批量去除超链接" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2011/05/03/关于在office excel中批量去除超链接/" class="article-date">
+  	<time datetime="2011-05-03T01:27:36.000Z" itemprop="datePublished">2011-05-03</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/05/03/关于在office excel中批量去除超链接/">关于在office excel中批量去除超链接</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>为什么要批量？因为数目众多，我也希望要去除的文档当仅一个链接，省得大家麻烦，也不用到处搜索了，对吧，大家时间都宝贵。</p>
+<p>为什么要去除？因为它是我心头大恨啊，没办法。我无意中点了一个带链接的电子邮件单元格，光标就变成了漏斗状，近一分钟后给我弹出什么无法开启邮件客户端的提示，再然后就是弹出那令人敬仰的IE浏览器，它不是一个在战斗，而是给我弹56个。机器差点，那你慢慢等吧。最后就是告诉你，令人敬仰的IE无法完成你要mailto的要求。大爷的，偶从来就没要求你mailto，偶只不过不小心点了下带超链接的单元格。不止一次了，想干掉你。有木有<del>~</del><br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/网络基础/">网络基础</a><a class="article-category-link" href="/categories/网络基础/网络学堂/">网络学堂</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2011/05/03/关于在office excel中批量去除超链接/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-常用邮箱的POP与SMTP服务器" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2011/01/24/常用邮箱的POP与SMTP服务器/" class="article-date">
+  	<time datetime="2011-01-24T00:41:21.000Z" itemprop="datePublished">2011-01-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/01/24/常用邮箱的POP与SMTP服务器/">常用邮箱的POP与SMTP服务器</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="常用邮箱的POP与SMTP服务器">常用邮箱的POP与SMTP服务器</h1><p>163邮箱<br>POP3服务器：POP.163.COM<br>SMTP服务器：SMTP.163.COM</p>
+<p>网易188财富邮<br>POP3服务器：pop.188.com<br>SMTP服务器：smtp.188.com</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/网络基础/">网络基础</a><a class="article-category-link" href="/categories/网络基础/网络学堂/">网络学堂</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2011/01/24/常用邮箱的POP与SMTP服务器/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 </div>
