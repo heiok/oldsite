@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[网络蝙蝠侠部落]]></title>
+  
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2015-03-24T08:50:41.943Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name><![CDATA[Edison]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2015/03/24/Markdow/"/>
+    <id>http://yoursite.com/2015/03/24/Markdow/</id>
+    <published>2015-03-24T08:50:41.943Z</published>
+    <updated>2015-03-24T08:50:41.943Z</updated>
+    <content type="html"><![CDATA[<h1 id="欢迎使用_Cmd_-_在线_Markdown_编辑阅读器">欢迎使用 Cmd - 在线 Markdown 编辑阅读器</h1><hr>
+<p><img src="/images/478.jpg" alt="2015春节的烟花"></p>
+<p><img src="https://zcma1g.by3302.livefilestore.com/y2pQ_9CypkoYGtIxXIpAFewzl8qNgByHpYo6QrtPfx8215FysE0_IFgsj5ilY7UFEz1v7OEcHOMmdPlC_NToKv5TARfpRbxnQ0XMYeBUY0dbptvCmNzZVPdrLs3moQwuiInr3wplDZ4tF_owQuI_gp1WA/_1110474.jpg" alt="OneDrive图床"></p>
+<p>$\prod_{i=0}^{n-1}$</p>
+<p>$(b^{2^i})_{ai}$</p>
+<p>$\prod_{i=0}^{n-1}(b^{2^i})^{a_i}$</p>
+<p>$$x=\frac{-b\pm\sqrt{b_2-4ac}}{2a}$$</p>
+<p>$(a_{n-1}…a_1a_0)$</p>
+<p>$b^n$ 可以表示为$\prod_{i=0}^{n-1}(b^{2^i})^{a_i}$之后对n进行二进制展开为<span>$(a_{n-1}...a_1a_0)$</span>取$a_n$为1的项全部相乘即可</p>
+<h1 id="欢迎使用_Cmd_-_在线_Markdown_编辑阅读器-1">欢迎使用 Cmd - 在线 Markdown 编辑阅读器</h1><hr>
+<p>我们理解您需要更便捷更高效的工具记录思想，整理笔记、知识，并将其中承载的价值传播给他人，<strong>Cmd Markdown</strong> 是我们给出的答案 —— 我们为记录思想和分享知识提供更专业的工具。</p>
+<p>$\prod_{i=0}^{n-1}(b^{2^i})^{a_i}$</p>
+<p>$$x=\frac{-b\pm\sqrt{b_2-4ac}}{2a}$$</p>
+<p>$(a_{n-1}…a_1a_0)$</p>
+<p>您可以使用 Cmd Markdown：</p>
+<blockquote>
+<ul>
+<li>整理知识，学习笔记</li>
+<li>发布日记，杂文，所见所想</li>
+<li>撰写发布技术文稿（代码支持）</li>
+<li>撰写发布学术论文（LaTeX 公式支持）</li>
+</ul>
+</blockquote>
+<p>请保留此份 Cmd Markdown 的欢迎稿兼使用说明，如需撰写新稿件，点击顶部工具栏右侧的 <i class="icon-file"></i> <strong>新文稿</strong> 或者使用快捷键 <code>Ctrl+Alt+N</code>。</p>
+<hr>
+<h2 id="什么是_Markdown">什么是 Markdown</h2><p>Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong> 或者 <em>斜体</em> 某些文字，更棒的是，它还可以</p>
+<h3 id="书写一个质能守恒公式[^LaTeX]">书写一个质能守恒公式[^LaTeX]</h3><p>$$E=mc^2$$</p>
+<h3 id="高亮一段代码[^code]">高亮一段代码[^code]</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="decorator">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># A comment</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">'hello world'</span></span><br></pre></td></tr></table></figure>
+<h3 id="高效绘制_流程图">高效绘制 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#7-流程图" target="_blank" rel="external">流程图</a></h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">st=&#62;start: Start&#10;op=&#62;operation: Your Operation&#10;cond=&#62;condition: Yes or No?&#10;e=&#62;end&#10;&#10;st-&#62;op-&#62;cond&#10;cond(yes)-&#62;e&#10;cond(no)-&#62;op</span><br></pre></td></tr></table></figure>
+<h3 id="高效绘制_序列图">高效绘制 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#8-序列图" target="_blank" rel="external">序列图</a></h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Alice-&#62;Bob: Hello Bob, how are you?&#10;Note right of Bob: Bob thinks&#10;Bob--&#62;Alice: I am good thanks!</span><br></pre></td></tr></table></figure>
+<h3 id="绘制表格">绘制表格</h3><table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align:right">价格</th>
+<th style="text-align:center">数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>计算机</td>
+<td style="text-align:right">$1600</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td>手机</td>
+<td style="text-align:right">$12</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td>管线</td>
+<td style="text-align:right">$1</td>
+<td style="text-align:center">234</td>
+</tr>
+</tbody>
+</table>
+<h3 id="更详细语法说明">更详细语法说明</h3><p>想要查看更详细的语法说明，可以参考我们准备的 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown" target="_blank" rel="external">Cmd Markdown 简明语法手册</a>，进阶用户可以参考 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#cmd-markdown-高阶语法手册" target="_blank" rel="external">Cmd Markdown 高阶语法手册</a> 了解更多高级功能。</p>
+<p>总而言之，不同于其它 <em>所见即所得</em> 的编辑器：你只需使用键盘专注于书写文本内容，就可以生成印刷级的排版格式，省却在键盘和工具栏之间来回切换，调整内容和格式的麻烦。<strong>Markdown 在流畅的书写和印刷级的阅读体验之间找到了平衡。</strong> 目前它已经成为世界上最大的技术分享网站 GitHub 和 技术问答网站 StackOverFlow 的御用书写格式。</p>
+<hr>
+<h2 id="什么是_Cmd_Markdown">什么是 Cmd Markdown</h2><p>您可以使用很多工具书写 Markdown，但是 Cmd Markdown 是这个星球上我们已知的、最好的 Markdown 工具——没有之一 ：）因为深信文字的力量，所以我们和你一样，对流畅书写，分享思想和知识，以及阅读体验有极致的追求，我们把对于这些诉求的回应整合在 Cmd Markdown，并且一次，两次，三次，乃至无数次地提升这个工具的体验，最终将它演化成一个 <strong>编辑/发布/阅读</strong> Markdown 的在线平台——您可以在任何地方，任何系统/设备上管理这里的文字。</p>
+<h3 id="1-_实时同步预览">1. 实时同步预览</h3><p>我们将 Cmd Markdown 的主界面一分为二，左边为<strong>编辑区</strong>，右边为<strong>预览区</strong>，在编辑区的操作会实时地渲染到预览区方便查看最终的版面效果，并且如果你在其中一个区拖动滚动条，我们有一个巧妙的算法把另一个区的滚动条同步到等价的位置，超酷！</p>
+<h3 id="2-_编辑工具栏">2. 编辑工具栏</h3><p>也许您还是一个 Markdown 语法的新手，在您完全熟悉它之前，我们在 <strong>编辑区</strong> 的顶部放置了一个如下图所示的工具栏，您可以使用鼠标在工具栏上调整格式，不过我们仍旧鼓励你使用键盘标记格式，提高书写的流畅度。</p>
+<p><img src="https://www.zybuluo.com/static/img/toolbar-editor.png" alt="tool-editor"></p>
+<h3 id="3-_编辑模式">3. 编辑模式</h3><p>完全心无旁骛的方式编辑文字：点击 <strong>编辑工具栏</strong> 最右测的拉伸按钮或者按下 <code>Ctrl + M</code>，将 Cmd Markdown 切换到独立的编辑模式，这是一个极度简洁的写作环境，所有可能会引起分心的元素都已经被挪除，超清爽！</p>
+<h3 id="4-_实时的云端文稿">4. 实时的云端文稿</h3><p>为了保障数据安全，Cmd Markdown 会将您每一次击键的内容保存至云端，同时在 <strong>编辑工具栏</strong> 的最右侧提示 <code>已保存</code> 的字样。无需担心浏览器崩溃，机器掉电或者地震，海啸——在编辑的过程中随时关闭浏览器或者机器，下一次回到 Cmd Markdown 的时候继续写作。</p>
+<h3 id="5-_离线模式">5. 离线模式</h3><p>在网络环境不稳定的情况下记录文字一样很安全！在您写作的时候，如果电脑突然失去网络连接，Cmd Markdown 会智能切换至离线模式，将您后续键入的文字保存在本地，直到网络恢复再将他们传送至云端，即使在网络恢复前关闭浏览器或者电脑，一样没有问题，等到下次开启 Cmd Markdown 的时候，她会提醒您将离线保存的文字传送至云端。简而言之，我们尽最大的努力保障您文字的安全。</p>
+<h3 id="6-_管理工具栏">6. 管理工具栏</h3><p>为了便于管理您的文稿，在 <strong>预览区</strong> 的顶部放置了如下所示的 <strong>管理工具栏</strong>：</p>
+<p><img src="https://www.zybuluo.com/static/img/toolbar-manager.jpg" alt="tool-manager"></p>
+<p>通过管理工具栏可以：</p>
+<p><i class="icon-share"></i> 发布：将当前的文稿生成固定链接，在网络上发布，分享<br><i class="icon-file"></i> 新建：开始撰写一篇新的文稿<br><i class="icon-trash"></i> 删除：删除当前的文稿<br><i class="icon-cloud"></i> 导出：将当前的文稿转化为 Markdown 文本或者 Html 格式，并导出到本地<br><i class="icon-reorder"></i> 列表：所有新增和过往的文稿都可以在这里查看、操作<br><i class="icon-pencil"></i> 模式：切换 普通/Vim/Emacs 编辑模式</p>
+<h3 id="7-_阅读工具栏">7. 阅读工具栏</h3><p><img src="https://www.zybuluo.com/static/img/toolbar-reader.jpg" alt="tool-manager"></p>
+<p>通过 <strong>预览区</strong> 右上角的 <strong>阅读工具栏</strong>，可以查看当前文稿的目录并增强阅读体验。</p>
+<p>工具栏上的五个图标依次为：</p>
+<p><i class="icon-list"></i> 目录：快速导航当前文稿的目录结构以跳转到感兴趣的段落<br><i class="icon-chevron-sign-left"></i> 视图：互换左边编辑区和右边预览区的位置<br><i class="icon-adjust"></i> 主题：内置了黑白两种模式的主题，试试 <strong>黑色主题</strong>，超炫！<br><i class="icon-desktop"></i> 阅读：心无旁骛的阅读模式提供超一流的阅读体验<br><i class="icon-fullscreen"></i> 全屏：简洁，简洁，再简洁，一个完全沉浸式的写作和阅读环境</p>
+<h3 id="8-_阅读模式">8. 阅读模式</h3><p>在 <strong>阅读工具栏</strong> 点击 <i class="icon-desktop"></i> 或者按下 <code>Ctrl+Alt+M</code> 随即进入独立的阅读模式界面，我们在版面渲染上的每一个细节：字体，字号，行间距，前背景色都倾注了大量的时间，努力提升阅读的体验和品质。</p>
+<h3 id="9-_标签、分类和搜索">9. 标签、分类和搜索</h3><p>在编辑区任意行首位置输入以下格式的文字可以标签当前文档：</p>
+<p>标签： 未分类</p>
+<p>标签以后的文稿在【文件列表】（Ctrl+Alt+F）里会按照标签分类，用户可以同时使用键盘或者鼠标浏览查看，或者在【文件列表】的搜索文本框内搜索标题关键字过滤文稿，如下图所示：</p>
+<p><img src="https://www.zybuluo.com/static/img/file-list.png" alt="file-list"></p>
+<h3 id="10-_文稿发布和分享">10. 文稿发布和分享</h3><p>在您使用 Cmd Markdown 记录，创作，整理，阅读文稿的同时，我们不仅希望它是一个有力的工具，更希望您的思想和知识通过这个平台，连同优质的阅读体验，将他们分享给有相同志趣的人，进而鼓励更多的人来到这里记录分享他们的思想和知识，尝试点击 <i class="icon-share"></i> (Ctrl+Alt+P) 发布这份文档给好友吧！</p>
+<hr>
+<p>再一次感谢您花费时间阅读这份欢迎稿，点击 <i class="icon-file"></i> (Ctrl+Alt+N) 开始撰写新的文稿吧！祝您在这里记录、阅读、分享愉快！</p>
+<p>作者 <a href="http://weibo.com/ghosert" target="_blank" rel="external">@ghosert</a><br>2014 年 07月 07日    </p>
+<p>[^LaTeX]: 支持 <strong>LaTeX</strong> 编辑显示支持，例如：$\sum_{i=1}^n a_i=0$， 访问 <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">MathJax</a> 参考更多使用方法。</p>
+<p>[^code]: 代码高亮功能支持包括 Java, Python, JavaScript 在内的，<strong>四十一</strong>种主流编程语言。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="欢迎使用_Cmd_-_在线_Markdown_编辑阅读器">欢迎使用 Cmd - 在线 Markdown 编辑阅读器</h1><hr>
+<p><img src="/images/478.jpg" alt="2015春节的烟花"></p>
+<p><img src="]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Google]]></title>
+    <link href="http://yoursite.com/2015/03/24/Google/"/>
+    <id>http://yoursite.com/2015/03/24/Google/</id>
+    <published>2015-03-24T07:46:17.000Z</published>
+    <updated>2015-03-24T07:48:27.732Z</updated>
+    <content type="html"><![CDATA[<h1 id="Google">Google</h1><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">https</span>:<span class="comment">//www.duliziyou.com/</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">http</span>:<span class="comment">//www.googlestable.cn/</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">https</span>:<span class="comment">//g.wen.lu/</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">https</span>:<span class="comment">//www.1024.bz/</span></span><br></pre></td></tr></table></figure>]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="Google">Google</h1><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="lin]]>
+    </summary>
+    
+      <category term="Google" scheme="http://yoursite.com/tags/Google/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://yoursite.com/2015/03/23/hello-world/"/>
+    <id>http://yoursite.com/2015/03/23/hello-world/</id>
+    <published>2015-03-23T00:07:32.241Z</published>
+    <updated>2015-03-23T00:07:32.241Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Win8网络受限解决方法]]></title>
+    <link href="http://yoursite.com/2015/03/17/Win8%E7%BD%91%E7%BB%9C%E5%8F%97%E9%99%90%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2015/03/17/Win8网络受限解决方法/</id>
+    <published>2015-03-17T06:30:52.000Z</published>
+    <updated>2015-03-23T00:07:32.241Z</updated>
+    <content type="html"><![CDATA[<h2 id="Win8系统网络连接时提示“网络受限”解决方法">Win8系统网络连接时提示“网络受限”解决方法</h2><blockquote>
+<p>Win+X</p>
+</blockquote>
+<ol>
+<li><p>用管理员身份运行 CMD</p>
+</li>
+<li><p>输入 netsh int tcp set heuristics disabled  回车</p>
+</li>
+<li><p>输入 netsh int tcp set global autotuninglevel=disabled 回车</p>
+</li>
+<li><p>输入 netsh int tcp set global rss=enabled 回车</p>
+</li>
+<li><p>重启</p>
+</li>
+</ol>
+<p>[TOC]</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="Win8系统网络连接时提示“网络受限”解决方法">Win8系统网络连接时提示“网络受限”解决方法</h2><blockquote>
+<p>Win+X</p>
+</blockquote>
+<ol>
+<li><p>用管理员身份运行 CMD</p>
+</li>
+<li>]]>
+    </summary>
+    
+      <category term="TCP/IP" scheme="http://yoursite.com/tags/TCP-IP/"/>
+    
+      <category term="WIN8" scheme="http://yoursite.com/tags/WIN8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[WIN平台资源管理器快捷开启FTP]]></title>
+    <link href="http://yoursite.com/2014/08/25/WIN%E5%B9%B3%E5%8F%B0%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E5%BF%AB%E6%8D%B7%E5%BC%80%E5%90%AFFTP/"/>
+    <id>http://yoursite.com/2014/08/25/WIN平台资源管理器快捷开启FTP/</id>
+    <published>2014-08-25T06:35:52.000Z</published>
+    <updated>2015-03-23T00:07:32.241Z</updated>
+    <content type="html"><![CDATA[<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="annotation">@echo</span> off</span><br><span class="line">explorer.exe <span class="string">ftp:</span><span class="comment">//username:password@192.168.0.1</span></span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
+<p>保存为ftp.bat。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span clas]]>
+    </summary>
+    
+      <category term="FTP" scheme="http://yoursite.com/tags/FTP/"/>
+    
+      <category term="explorer" scheme="http://yoursite.com/tags/explorer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[qmail邮件服务器故障]]></title>
+    <link href="http://yoursite.com/2013/07/26/qmail%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%85%E9%9A%9C/"/>
+    <id>http://yoursite.com/2013/07/26/qmail邮件服务器故障/</id>
+    <published>2013-07-26T10:05:45.000Z</published>
+    <updated>2015-03-23T00:07:32.257Z</updated>
+    <content type="html"><![CDATA[<p>临近下班，报邮件无法收发，登录qmail查看，服务与端口都正常启动，队列里有邮件停留，由客户机telnet至邮件服务器均无法获得正常服务器信息回显。再次登录qmail查看，由于其实在太稳定，维护命令都不太记得，呵呵，就给它来了个ps -aux（其实我都不太清楚这命令干嘛用的），发现其结果列表中有以下这么一段：</p>
+<a id="more"></a>
+<blockquote>
+<p>eadproctitle service errors: … disk space?multilog: warning: unable to write to /var/log/qmail/smtpd/current, pausing: out of disk space?</p>
+</blockquote>
+<p>莫非磁盘爆满？dh -f查看，果然，已用100%。清除一些垃圾文件后，邮件服务器正常。纯粹一例磁盘空间爆满导致的邮件无法收发故障！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>临近下班，报邮件无法收发，登录qmail查看，服务与端口都正常启动，队列里有邮件停留，由客户机telnet至邮件服务器均无法获得正常服务器信息回显。再次登录qmail查看，由于其实在太稳定，维护命令都不太记得，呵呵，就给它来了个ps -aux（其实我都不太清楚这命令干嘛用的），发现其结果列表中有以下这么一段：</p>]]>
+    
+    </summary>
+    
+      <category term="qmail" scheme="http://yoursite.com/tags/qmail/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Wordpress主机更改目录名或域名后数据库更新语句]]></title>
+    <link href="http://yoursite.com/2013/07/15/Wordpress%E4%B8%BB%E6%9C%BA%E6%9B%B4%E6%94%B9%E7%9B%AE%E5%BD%95%E5%90%8D%E6%88%96%E5%9F%9F%E5%90%8D%E5%90%8E%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9B%B4%E6%96%B0%E8%AF%AD%E5%8F%A5/"/>
+    <id>http://yoursite.com/2013/07/15/Wordpress主机更改目录名或域名后数据库更新语句/</id>
+    <published>2013-07-15T09:33:30.000Z</published>
+    <updated>2015-03-23T00:07:32.241Z</updated>
+    <content type="html"><![CDATA[<p>在Wordpress虚拟主机更改目录名或域名后，如果不在数据库中执行相应更新，会导致Wordpress博客站点的图片无法正常显示，操作方法如下：</p>
+<a id="more"></a>
+<p>登录PHPmyadmin,选择相应数据库后,点击SQL,粘贴下面一句到运行框,运行.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">UPDATE</span> wp_posts <span class="keyword">SET</span> post_content = <span class="keyword">replace</span>( post_content, <span class="string">'www.heiok.com/修改前目录名字'</span>, <span class="string">'www.heiok.com/修改后目录名字'</span> ) ;</span></span><br></pre></td></tr></table></figure></p>
+<p>查询语句:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="string">`wp_options`</span> <span class="keyword">WHERE</span> <span class="string">`option_name`</span> <span class="keyword">IN</span> (<span class="string">'siteurl'</span>,<span class="string">'home'</span>) <span class="keyword">LIMIT</span> <span class="number">0</span>,<span class="number">30</span></span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在Wordpress虚拟主机更改目录名或域名后，如果不在数据库中执行相应更新，会导致Wordpress博客站点的图片无法正常显示，操作方法如下：</p>]]>
+    
+    </summary>
+    
+      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[DDWRT打造5个LAN口路由器]]></title>
+    <link href="http://yoursite.com/2013/07/08/DDWRT%E6%89%93%E9%80%A05%E4%B8%AALAN%E5%8F%A3%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+    <id>http://yoursite.com/2013/07/08/DDWRT打造5个LAN口路由器/</id>
+    <published>2013-07-08T09:03:08.000Z</published>
+    <updated>2015-03-23T00:07:32.241Z</updated>
+    <content type="html"><![CDATA[<p>日常工作生活中，偶会碰到宽带路由器LAN口不够用的情况，比如一个非常小的办公室有四台主机需要接入内网，又或者这个办公室就一个工作室，只有五台主机。通常我们市面上能找到的宽带路由器都是一个WAN口，42上LAN口这种形式，如果你需要增加LAN口数量，一般就是增加多一个路由器或交换设备或HUB。</p>
+<a id="more"></a>
+<p>对于上面所举例子，如果增加一个路由器或交换机稍微浪费，其实如果你现有的宽带路由器支持刷第三方固件（比如DDWRT），可以将WAN口变身为LAN口使用哦<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;1.&#36335;&#30001;&#22120;&#25903;&#25345;&#21047;DDWRT&#65307;&#10;&#10;2.&#36335;&#30001;&#22120;&#20027;&#33455;&#29255;&#38750;Atheros&#25110;Ralink&#33455;&#29255;&#65292;&#22240;&#20026;[Atheros&#25110;Ralink&#33455;&#29255;DDWRT&#19981;&#25903;&#25345;VLAN](http://www.heiok.com/1442.html)&#12290;&#10;&#10;&#21047;&#22909;DDWRT&#21518;&#65292;&#30331;&#24405;&#31649;&#29702;&#30028;&#38754;&#65292;SETUP&#65293;VLANs&#65292;&#22914;&#19979;&#22270;&#65292;&#21487;&#20197;&#30475;&#20986;&#65292;&#40664;&#35748;&#24773;&#20917;&#19979;&#65292;WAN&#21475;&#38582;&#23646;VLAN1&#65292;LAN&#21475;&#38582;&#23646;VLAN0&#65292;&#30475;&#21040;&#36825;&#37324;&#65292;&#26126;&#30333;&#20026;&#20309;&#24179;&#24120;WAN&#21475;&#19982;LAN&#21475;&#26080;&#27861;&#30452;&#25509;&#36890;&#35759;&#20102;&#21543;&#12290;&#20026;&#20102;&#22686;&#21152;&#19968;&#20010;LAN&#21475;&#65292;&#25105;&#20204;&#21487;&#20197;&#23558;WAN&#21475;&#30001;VLAN1&#20013;&#21462;&#28040;&#65292;&#22312;VLAN0&#32452;&#21035;&#37324;&#21246;&#36873;&#19978;&#24182;&#20445;&#23384;&#35774;&#32622;&#21363;&#21487;&#65292;&#23601;&#26159;&#36825;&#20040;&#31616;&#21333;&#12290;&#22914;&#27492;&#20320;&#20415;&#21487;&#20197;&#25317;&#26377;5&#20010;LAN&#21475;&#21734;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/def3e514f66350d9d2104a47fafb135b136f3342.jpg" alt="ddwrt-vlan"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>日常工作生活中，偶会碰到宽带路由器LAN口不够用的情况，比如一个非常小的办公室有四台主机需要接入内网，又或者这个办公室就一个工作室，只有五台主机。通常我们市面上能找到的宽带路由器都是一个WAN口，42上LAN口这种形式，如果你需要增加LAN口数量，一般就是增加多一个路由器或交换设备或HUB。</p>]]>
+    
+    </summary>
+    
+      <category term="DD-WRT" scheme="http://yoursite.com/tags/DD-WRT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[小技巧更改windows文本文件默认编码格式]]></title>
+    <link href="http://yoursite.com/2013/06/26/%E5%B0%8F%E6%8A%80%E5%B7%A7%E6%9B%B4%E6%94%B9windows%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E9%BB%98%E8%AE%A4%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F/"/>
+    <id>http://yoursite.com/2013/06/26/小技巧更改windows文本文件默认编码格式/</id>
+    <published>2013-06-26T09:05:44.000Z</published>
+    <updated>2015-03-23T00:07:32.257Z</updated>
+    <content type="html"><![CDATA[<p>在日常使用Windows文本文件过程中，本文以Windows记事本.txt文件格式为例。默认情况下都是以ANSI编码保存，如果需要保存为其他编码，则需要你手动选择，造成一定的不便。比如我用的繁体WIN7，用记事本保存中文时会乱码，每次都要手动选择编码UTF-8。</p>
+<a id="more"></a>
+<p>大约两年多前我就此问题在某论坛里进行过发贴求助，如何更改windows文本文件默认编码格式，但都没得到结果，其实发现早在2005年的时候都有人有这个需求。都是换编辑器来解决。昨天的时候，在群里，包哥给了个百度知道的链接，照着上面的提示操作，证实可行，贴出来分享下给大伙，方法如下：</p>
+<p>1.在你本地硬盘任意分区建立一个txt文本文件，并将其保存为你需要的编码格式，如：UTF-8。这个文件可以设置为隐藏哦~~~</p>
+<p>2.打开你的注册表编辑器，定位到HKEY_CLASSES_ROOT.txt\ShellNew，在右侧窗口新增“字串值”FileName，内容键值为你第一步建立的文本文件路径与名称，此例中为G:\Chang-Win-Txt-Default-Code.txt 。</p>
+<p><img src="/images/028aaa9a5ea032b272e8843dec55ab9bf4c99681.jpg" alt="更改TXT文件默认编码"></p>
+<p>以上步骤结果不会改变此前本地磁盘内的文件编码，只对改变后的文件编码格式有效。Win7 64位繁体与WinXP sp3简体测试通过。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在日常使用Windows文本文件过程中，本文以Windows记事本.txt文件格式为例。默认情况下都是以ANSI编码保存，如果需要保存为其他编码，则需要你手动选择，造成一定的不便。比如我用的繁体WIN7，用记事本保存中文时会乱码，每次都要手动选择编码UTF-8。</p>]]>
+    
+    </summary>
+    
+      <category term="Windows" scheme="http://yoursite.com/tags/Windows/"/>
+    
+      <category term="text" scheme="http://yoursite.com/tags/text/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[推荐一个网络知识搜索引擎]]></title>
+    <link href="http://yoursite.com/2013/06/17/%E6%8E%A8%E8%8D%90%E4%B8%80%E4%B8%AA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
+    <id>http://yoursite.com/2013/06/17/推荐一个网络知识搜索引擎/</id>
+    <published>2013-06-17T06:46:41.000Z</published>
+    <updated>2015-03-23T00:07:32.257Z</updated>
+    <content type="html"><![CDATA[<p>Wolfram（美国计算机科学家史蒂芬·沃尔弗拉姆Stephen Wolfram）是数学软件Mathematica的开发者，Wolfram Alpha就是以Mathematica为计算后台的一款计算型知识搜索引擎<span style="color: #000000;">（Computational Knowledge Engine）</span>。</p>
+<a id="more"></a>
+<p>Wolframalpha不仅仅是一个数据分析网站，并且可以查到很多物质的物性，自然科学搜索，可以帮你画数学函数图、积分、求解等,用户在它的搜索框键入需要查询的问题后，它将直接向用户返回答案，而不是一大堆网页链接。沃尔弗拉姆称他的新发明是“知识引擎”，它能真正理解人类输入的问题，并找到几乎所有涉及人类知识问题的答案。有免费版与付费版本。</p>
+<p><span style="font-size: x-large;">Wolfram Alpha的网址:</span><a href="http://www.wolframalpha.com/" target="_blank" rel="external"><span style="font-size: x-large;">http://www.wolframalpha.com/</span></a></p>
+<p>不如输入<strong><span style="font-size: medium;"><span style="color: #ff0000;">sin(x^2+y^2)</span></span></strong>试试？</p>
+<p>最后提供两份Wolfram Alpha客户端下载，在手机或IPAD安装尽情用吧。</p>
+<p><a href="http://www.bego.cc/file/23183139" target="_blank" rel="external">安卓版下载地址</a></p>
+<p><a href="http://www.bego.cc/file/23183138" target="_blank" rel="external">苹果版下载地址</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Wolfram（美国计算机科学家史蒂芬·沃尔弗拉姆Stephen Wolfram）是数学软件Mathematica的开发者，Wolfram Alpha就是以Mathematica为计算后台的一款计算型知识搜索引擎<span style="color: #000000;">（Computational Knowledge Engine）</span>。</p>]]>
+    
+    </summary>
+    
+      <category term="Search Engine" scheme="http://yoursite.com/tags/Search-Engine/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[保留原配置更改Cisco1721路由器密码]]></title>
+    <link href="http://yoursite.com/2013/06/15/%E4%BF%9D%E7%95%99%E5%8E%9F%E9%85%8D%E7%BD%AE%E6%9B%B4%E6%94%B9Cisco1721%E8%B7%AF%E7%94%B1%E5%99%A8%E5%AF%86%E7%A0%81/"/>
+    <id>http://yoursite.com/2013/06/15/保留原配置更改Cisco1721路由器密码/</id>
+    <published>2013-06-15T10:28:58.000Z</published>
+    <updated>2015-03-23T00:07:32.257Z</updated>
+    <content type="html"><![CDATA[<p>公司之前的专线接入通过第三方ISP，提供有Cisco 1721路由器作二次路由，后来更改ISP退下来。纯粹为好奇学习，想登录查看一下原配置，但密码已无法取得。以前CCNA学习时，阮老师有教，年代久远，也已不记得。最终还是Google帮上忙，经实践，以下步骤可以在不清除原有配置的基础上修改Cisco 1721的登录密码。步骤整理如下：</p>
+<a id="more"></a>
+<p>1、用一根Console线将路由器Console口与PC机串口(COM1或COM2)连接。（至于没有Console线的用户可以自行制作一根，制作 方式我会稍后提到）<br>2、于PC机启动超级终端，配置9600波特率、8个数据位、无奇偶校验、2个停止位。<br>3、“＞” 提示符下，用Show Version命令查看登记码(一般为OX2102或Oxl02)，记住此登记码后面第9步要将此登记码还原。<br>4、查看登记码，如果中断屏蔽（即登记码第4位为1），则重启路由器，自启动起30秒钟内按Ctrl+Break键；如果中断未屏蔽， 则发送中断（Cisco公司提供的技术手册注明要在开机后60秒内按Berak键）。<br>5、根据路由器系列不同，分别进行如下配置：<br>*路由器是2000、2500、3000、680×0 based 4000、7000系列，IOS版本为10.0以下或出现“&gt;”提示符，则键入以下命令：<br>&gt;o/r 0×42</p>
+<p>&gt; i</p>
+<p>*路由器是1700、1003、1004、3600、4500、4700、72XX、75XX系列或出现“ROMMOM&gt;”提示符，则键入以下命令：<br>ROMMON&gt;confreg 0×42</p>
+<p>ROMMON&gt;reset</p>
+<p>6、当提示是否进入配置对话框时（Would you like to enter the initial confinguration dialong?[yes]:),回答NO，如误<br>输入”YES”，立刻按Cter+C键退出）。在出现”Press RETURN to get started!”提示时，按回车键，进入ROM模式”Router&gt;”。<br>7、键入enable命令进入EXEC状态，键入Router#show config查看原路由器配置和未加密口念，建议此时立刻做一个文本备份文件，以免误操作将原路由器配置丢失；再键入ROUTER#configuration memory,将NVRM模式中的参数表装入内存。<br>8、键入Router#configure terminal 命令进行配置，从配置表中找出（或改写）忘记的有效口令；更改完毕后一定要写入NVRAM中（Router#write memory(copy runing-config startup-config))，否则会丢失路由器原配置，并且会使改写的口令无效。<br>9、将第3步查到的登记码还原，一般为0×2102（即从闪存正常启动，并屏蔽中断），并激活所有端口（系统会将所有端口自动关闭）：<br>Router（config）#config-register 0×2102</p>
+<p>Router(config)#interface ××</p>
+<p>Router(config-if)#no shutdown</p>
+<p>Router#Ctrl-Z</p>
+<p>10、重新启动路由器：<br>Router#reload</p>
+<p>至此，可以在不丢失原有路由器配置的情况下找到或更改口令。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>公司之前的专线接入通过第三方ISP，提供有Cisco 1721路由器作二次路由，后来更改ISP退下来。纯粹为好奇学习，想登录查看一下原配置，但密码已无法取得。以前CCNA学习时，阮老师有教，年代久远，也已不记得。最终还是Google帮上忙，经实践，以下步骤可以在不清除原有配置的基础上修改Cisco 1721的登录密码。步骤整理如下：</p>]]>
+    
+    </summary>
+    
+      <category term="Cisco" scheme="http://yoursite.com/tags/Cisco/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[港澳台及公共DNS汇总]]></title>
+    <link href="http://yoursite.com/2013/06/10/%E6%B8%AF%E6%BE%B3%E5%8F%B0%E5%8F%8A%E5%85%AC%E5%85%B1DNS%E6%B1%87%E6%80%BB/"/>
+    <id>http://yoursite.com/2013/06/10/港澳台及公共DNS汇总/</id>
+    <published>2013-06-10T04:03:43.000Z</published>
+    <updated>2015-03-23T00:07:32.272Z</updated>
+    <content type="html"><![CDATA[<p>公开DNS列表：</p>
+<p>Free Public DNS Server</p>
+<ul>
+<li>Google<br>8.8.8.8<br>8.8.4.4<br>4.3.2.1</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li><p>Dnsadvantage<br>156.154.70.1<br>156.154.71.1</p>
+</li>
+<li><p>OpenDNS<br>208.67.222.222<br>208.67.220.220</p>
+</li>
+<li><p>Norton<br>198.153.192.1<br>198.153.194.1</p>
+</li>
+<li><p>GTEI DNS (now Verizon)<br>4.2.2.1<br>4.2.2.2<br>4.2.2.3<br>4.2.2.4<br>4.2.2.5<br>4.2.2.6</p>
+</li>
+<li><p>ScrubIt<br>67.138.54.100<br>207.225.209.66</p>
+</li>
+<li><p><a href="http://securedns.dns.com/" target="_blank" rel="external">Comodo SecureDNS 2.0 </a><br>8.26.56.26<br>8.20.247.20</p>
+</li>
+<li><p>114DNS<br>号称国内首家云安全DNS,详情请<a href="http://safe.114dns.com/index.html" target="_blank" rel="external">点击这里</a>查看.亦可查询国内各省运营商DNS.</p>
+</li>
+</ul>
+<p>114.114.114.114<br>114.114.115.115</p>
+<ul>
+<li>国内几个教育网DNS<br>202.120.2.101</li>
+</ul>
+<p>210.34.0.18</p>
+<p>211.69.143.1</p>
+<p><strong>香港DNS服务器</strong></p>
+<ul>
+<li><p>Hutchison Global Communications Limited(HGC)<br>210.0.255.250 bbdns1.on-nets.com<br>210.0.255.251 bbdns2.on-nets.com<br>210.0.128.250 bbdns3.on-nets.com<br>210.0.128.251 bbdns4.on-nets.com<br>202.45.84.67 brown.hutchcity.com<br>202.45.84.68 red.hutchcity.com<br>202.181.240.44 edns.wyith.net<br>210.0.128.241 rbsdns31.net-yan.com<br>210.0.128.242 rbsdns32.net-yan.com<br>210.0.255.216 rbsdns33.net-yan.com<br>202.45.84.58 dns.hutchcity.com<br>202.45.84.59 mailx.hutchcity.com</p>
+</li>
+<li><p>PCCW / Netvigator / PowerBase<br>218.102.23.228 ns3.netvigator.com<br>203.198.7.66 ns4.netvigator.com<br>218.102.23.77 dns05.netvigator.com<br>218.102.48.77 dns07.netvigator.com<br>203.198.23.208 dns03.netvigator.com<br>218.102.32.208 dns04.netvigator.com<br>218.102.62.71 dns02.netvigator.com<br>210.87.253.13 ns9.imsbiz.com<br>210.87.250.48 tvbizdns02.imsbiz.com<br>205.252.144.123 ns1.pbase.net<br>202.153.97.130 ns2.pbase.net<br>205.252.144.126<br>205.252.144.28<br>205.252.144.123<br>210.87.250.58<br>210.87.253.23</p>
+</li>
+<li><p>ABC Computer Systems Limited<br>202.66.250.1 ns1.abchk.net<br>202.60.250.2 ns2.abchk.net</p>
+</li>
+</ul>
+<p>CPCNet Hong Kong Limited</p>
+<p>202.76.4.1 ns1.hk.linkage.net<br>202.76.4.2 ns2.hk.linkage.net</p>
+<ul>
+<li><p>Diyixian.com Limited<br>202.134.93.30 ns1.diyixian.com<br>202.134.64.3 ns2.diyixian.com<br>202.134.64.29 ns3.diyixian.com<br>202.134.93.31 ns4.diyixian.com</p>
+</li>
+<li><p>iLink Holdings Limited<br>202.123.192.2 dns1.ilink.net<br>202.123.208.2 dns2.ilink.net</p>
+</li>
+<li><p>KDDI Hong Kong Limited<br>202.177.2.2 apple.kdd.net.hk<br>202.177.2.3 orange.kdd.net.hk</p>
+</li>
+<li><p>HKCIX<br>202.181.224.2 ns1.hk.linkage.net<br>202.181.224.239 ns2.hk.linkage.net</p>
+</li>
+<li><p>New World<br>203.98.160.11 dns11.nwtgigalink.com<br>203.98.160.12 dns12.nwtgigalink.com</p>
+</li>
+<li><p>Pacific SuperNet Limited<br>202.14.67.4 ns1.pacific.net.hk<br>202.14.67.14 ns2.pacific.net.hk</p>
+</li>
+<li><p>iAdvantage Limited<br>202.85.128.32 hk1dns01.iadvantage.net.hk<br>202.85.128.33 hk1dns02.iadvantage.net.hk<br>203.194.239.32 hk3dns01.iadvantage.net.hk<br>202.85.170.89 hk3dns02.iadvantage.net.hk</p>
+</li>
+<li><p>Cyber Express Communication Limited<br>202.60.252.8 ns1.cyberec.com<br>202.60.252.9 ns2.cyberec.com<br>202.60.253.171 ns3.cyberec.com<br>202.85.146.104</p>
+</li>
+<li><p>有线宽频 i-Cable<br>61.10.0.130<br>61.10.1.130<br>210.80.60.1<br>210.80.60.2</p>
+</li>
+<li><p>香港宽频 Hong Kong BroadBand Network<br>203.80.96.10<br>203.80.96.9</p>
+</li>
+<li><p>HKNet宽频<br>202.67.240.222<br>202.67.240.221</p>
+</li>
+<li><p>和记环球电讯<br>202.45.84.58<br>202.45.84.59</p>
+</li>
+<li><p>网上行宽频 Nevigator BroadBand<br>208.151.69.65<br>208.167.231.55</p>
+</li>
+<li><p>SmarTone BroadBand 数码通宽频<br>202.140.96.51<br>202.140.96.52</p>
+</li>
+<li><p>NetFront 前线<br>202.81.252.1<br>202.81.252.2</p>
+</li>
+<li><p>SpeedLink<br>202.134.93.120<br>202.65.151.85</p>
+</li>
+</ul>
+<p><strong>台湾DNS服务器：</strong></p>
+<ul>
+<li><p>中华电信<br>168.95.1.1（dns.hinet.net）<br>168.95.192.1（hntp1.hinet.net）<br>168.95.192.2（hntp3.hinet.net）</p>
+</li>
+<li><p>速博 sparq<br>61.56.211.185<br>211.78.130.2</p>
+</li>
+<li><p>Seednet<br>139.175.55.244<br>139.175.252.16<br>139.175.150.20<br>139.175.10.20</p>
+</li>
+<li><p>亚太宽频<br>210.200.211.193<br>210.200.211.225</p>
+</li>
+<li><p>台湾固网<br>211.78.215.137<br>211.78.215.200</p>
+</li>
+</ul>
+<p><strong>澳门DNS服务器</strong></p>
+<p>202.175.3.8  vassun2.macau.ctm.net<br>202.175.3.3</p>
+<p><strong>日本So-net电信</strong></p>
+<p>202.238.95.24<br>202.238.95.26</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>公开DNS列表：</p>
+<p>Free Public DNS Server</p>
+<ul>
+<li>Google<br>8.8.8.8<br>8.8.4.4<br>4.3.2.1</li>
+</ul>]]>
+    
+    </summary>
+    
+      <category term="DNS" scheme="http://yoursite.com/tags/DNS/"/>
+    
+      <category term="Query" scheme="http://yoursite.com/tags/Query/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[BGP与AS自治号查询]]></title>
+    <link href="http://yoursite.com/2013/06/07/BGP%E4%B8%8EAS%E8%87%AA%E6%B2%BB%E5%8F%B7%E6%9F%A5%E8%AF%A2/"/>
+    <id>http://yoursite.com/2013/06/07/BGP与AS自治号查询/</id>
+    <published>2013-06-07T06:50:31.000Z</published>
+    <updated>2015-03-23T00:07:32.241Z</updated>
+    <content type="html"><![CDATA[<p>关于什么是BGP与AS自治号,可以参考一下右侧这个链接,<a href="http://www.cnnic.net.cn/jczyfw/ipas/assq/201206/t20120612_26540.htm" target="_blank" rel="external">点击了解BGP与AS自治号</a>.</p>
+<a id="more"></a>
+<p>由一个流量穿透讨论贴里得到的查询网址,之前没有接触过,试着查询了一下,发现还是比较强大的.能够查询到任何一个公网IP地址AS自治域号码，注册信息等。并且能够查询到任何指向该IP所有DNS的A记录! 也可以查询中国电信与联通的IP地址段范围.</p>
+<p>查询地址：<a href="http://bgp.he.net/" target="_blank" rel="external">http://bgp.he.net/</a></p>
+<p>在此顺带粗略解析下,什么是流量穿透? 我自己在这里大胆作了总结吧,有错误的地方请指教.</p>
+<p>流量穿透:一些小ISP运营商以某些企业名义向其他ISP运营商申请带宽用来作公网NAT,以达到节省网间出口结算流量费用.(</p>
+<p>例如:移动,铁通或广电宽带用户通过查询发现自己的公网IP有两个或以上,而且这些变动的公网IP并非冠名于为你服务的运营商.</p>
+<p>文章结尾再提供一个由<a href="https://extranet.swisscom.ch/ipplus/public/public/" target="_blank" rel="external">IP-Plus</a>提供的BGP查询路由器,无须密码即可进入查询,如下:</p>
+<p><code>telnet route-server.ip-plus.net</code></p>
+<p><code>show ip bgp</code></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>关于什么是BGP与AS自治号,可以参考一下右侧这个链接,<a href="http://www.cnnic.net.cn/jczyfw/ipas/assq/201206/t20120612_26540.htm">点击了解BGP与AS自治号</a>.</p>]]>
+    
+    </summary>
+    
+      <category term="AS" scheme="http://yoursite.com/tags/AS/"/>
+    
+      <category term="BGP" scheme="http://yoursite.com/tags/BGP/"/>
+    
+      <category term="Query" scheme="http://yoursite.com/tags/Query/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[qmail邮件服务新增SMTP端口]]></title>
+    <link href="http://yoursite.com/2013/06/07/qmail%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1%E6%96%B0%E5%A2%9ESMTP%E7%AB%AF%E5%8F%A3/"/>
+    <id>http://yoursite.com/2013/06/07/qmail邮件服务新增SMTP端口/</id>
+    <published>2013-06-07T04:43:16.000Z</published>
+    <updated>2015-03-23T00:07:32.257Z</updated>
+    <content type="html"><![CDATA[<p>公司里有搭建邮件服务器,方便同事间的交流,但自搭建运行以来,便一直存在一个问题,香港同事回港后,使用客户端只可以收取公司服务器邮件,而无法通过客户端由公司邮件服务器发送邮件,香港办事处则可以(商用宽频),但其他非公司邮件则收发正常.在本文方法之前的解决办法是发公司邮件通过WEB方式发送.经查,香港同事回港后(主要是使用家居宽频)无法通过客户端发送公司邮件的原因是由于香港ISP封锁了非服务商提供的所有25端口,例如:如果你是香港HKBN的家居宽频用户,则只有往HKBN的25端口可通行,其他方向的一律DROP,换言之,要通过邮件客户端25端口发送邮件,必须经HKBN,由他代转发,看下图会更加明白,这是一位使用香港PCCW网上行邮件服务的用户,在邮件客户端的设置.</p>
+<a id="more"></a>
+<p><img src="/images/b0305b22816ebaa1fa5df501813900216208cf0a.jpg" alt="香港HKBN SMTP服务器" title="香港HKBN SMTP服务器"></p>
+<p>鉴于以上情况,为运行中的qmail邮件服务器新增了一个SMTP端口,已正常运行较长一段时间,这里发文说下步骤与方法,共享给有需要的网友,或许有网友会有疑问,那你的公司邮件也由HKBN来转发不就行了么?为何如此麻烦?其实我们的邮件服务器只供公司内部交流,即是内部邮件服务器,不对公网开放.通常来说,本文只适用于中国大陆之外的用户.因为目前大陆ISP只是封锁个人80端口,对于25端口并没发现或听闻有封锁.</p>
+<p>qmail邮件服务新增SMTP端口方法与具体步骤:(为了方便,本文新增SMTP端口为465)</p>
+<p>第一步,将/var/qmail/supervise/qmail-smtpd复制多一份并改名,为方便日后查询,建议在名字后面加上新增的端口号,如SMTP-465之类的;<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># cp -Rp <span class="regexp">/var/</span>qmail<span class="regexp">/supervise/</span>qmail-smtpd <span class="regexp">/var/</span>qmail<span class="regexp">/supervise/</span>qmail-smtpd-<span class="number">465</span></span><br></pre></td></tr></table></figure></p>
+<p>第二步,找到并修改/var/qmail/supervise/qmail-smtpd-465/run文件,设定要新增的监听端口;</p>
+<p><code>-u &quot;$QMAILDUID&quot; -g &quot;$NOFILESGID&quot; 0 smtp \</code></p>
+<p>将这一行结尾处smtp修改为新增加的监听端口号,即:</p>
+<p><code>-u &quot;$QMAILDUID&quot; -g &quot;$NOFILESGID&quot; 0 465 \</code></p>
+<p>第三步,修改/var/qmail/supervise/qmail-smtpd-465/log/run文件,最后有一行是指向smtpd的纪录,修改指向一个新目录;<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exec <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>setuidgid qmaill <span class="regexp">/usr/</span>local<span class="regexp">/bin/mu</span>ltilog t <span class="regexp">/var/</span>log<span class="regexp">/qmail/</span>smtpd-<span class="number">465</span></span><br></pre></td></tr></table></figure></p>
+<p>第四步,建立smtpd-465记录目录;<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># <span class="keyword">mkdir</span> /<span class="keyword">var</span>/<span class="keyword">log</span>/qmail/smtpd-465/</span><br><span class="line"># chown qmaill/<span class="keyword">var</span>/<span class="keyword">log</span>/qmail/smtpd-465/</span><br></pre></td></tr></table></figure></p>
+<p>第五步,在/service目录下新建一个soft link 到 /var/qmail/supervise/qmail-smtpd-465/;<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># ln -s <span class="regexp">/var/</span>qmail<span class="regexp">/supervise/</span>qmail-smtpd-<span class="number">465</span><span class="regexp">/ /</span>service<span class="regexp">/qmail-smtpd-465/</span></span><br></pre></td></tr></table></figure></p>
+<p>第六步,修改qmailctl文件;</p>
+<p>找到这一行</p>
+<p><code>svclist=&quot;qmail-send qmail-smtpd&quot;</code></p>
+<p>添加新增的监听端口</p>
+<p><code>svclist=&quot;qmail-send qmail-smtpd qmail-smtpd-465&quot;</code></p>
+<p>保存退出即可,最后netstat -ntlp查看端口状态,如果没发现,重启下qmail服务试试.(我添加后无须重启qmail)</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>公司里有搭建邮件服务器,方便同事间的交流,但自搭建运行以来,便一直存在一个问题,香港同事回港后,使用客户端只可以收取公司服务器邮件,而无法通过客户端由公司邮件服务器发送邮件,香港办事处则可以(商用宽频),但其他非公司邮件则收发正常.在本文方法之前的解决办法是发公司邮件通过WEB方式发送.经查,香港同事回港后(主要是使用家居宽频)无法通过客户端发送公司邮件的原因是由于香港ISP封锁了非服务商提供的所有25端口,例如:如果你是香港HKBN的家居宽频用户,则只有往HKBN的25端口可通行,其他方向的一律DROP,换言之,要通过邮件客户端25端口发送邮件,必须经HKBN,由他代转发,看下图会更加明白,这是一位使用香港PCCW网上行邮件服务的用户,在邮件客户端的设置.</p>]]>
+    
+    </summary>
+    
+      <category term="qmail" scheme="http://yoursite.com/tags/qmail/"/>
+    
+      <category term="smtp" scheme="http://yoursite.com/tags/smtp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Win虚拟主机PHP判断域名跳转代码]]></title>
+    <link href="http://yoursite.com/2013/06/06/Win%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BAPHP%E5%88%A4%E6%96%AD%E5%9F%9F%E5%90%8D%E8%B7%B3%E8%BD%AC%E4%BB%A3%E7%A0%81/"/>
+    <id>http://yoursite.com/2013/06/06/Win虚拟主机PHP判断域名跳转代码/</id>
+    <published>2013-06-06T03:08:36.000Z</published>
+    <updated>2015-03-23T00:07:32.241Z</updated>
+    <content type="html"><![CDATA[<p>用Win虚拟主机真的很受伤,当年也是懵懂年少啊,哪知道需要什么主机?随便搞一个用上,结果导致现在各种苦恼,各种不便.本站放于WIN虚拟主机之下,前段时间想启用闲置多年的另一域名放到同一主机下,反正空间还有,也是同一服务商.随即开工,最终选用了以下这段跳转代码,很简单的一段代码,但偶不是码农,还是记下来,方便有同样需要的网友,如果你也是用的Win虚拟主机,我想会需要的.就是一段简单的判断语句.代码功能:根据用户输入的域名跳转到相应的站点.<br><a id="more"></a><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$site</span>=<span class="variable">$_SERVER</span>[<span class="string">'SERVER_NAME'</span>];</span><br><span class="line"><span class="keyword">if</span>(strpos(<span class="variable">$site</span>, <span class="string">'默认站点域名关键字'</span>))</span><br><span class="line"><span class="keyword">require</span>(<span class="string">'./站点目录1/wp-blog-header.php'</span>);</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="keyword">require</span>(<span class="string">'./站点目录2/wp-blog-header.php'</span>);</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">?&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>代码说明:</p>
+<p>默认站点域名关键字: 假设你的站点域名为heiok.com,则填写heiok即可;</p>
+<p>站点目录1\站点目录2: 此为你WIN虚拟主机下的站点目录子文件夹名称;</p>
+<p>使用方法:</p>
+<p>复制粘贴以上代码,另存文件为index.php,上传到WIN虚拟主机根目录(是虚拟主机根目录,并非站点目录1.2的根目录,是1.2的父目录就对了.)</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>用Win虚拟主机真的很受伤,当年也是懵懂年少啊,哪知道需要什么主机?随便搞一个用上,结果导致现在各种苦恼,各种不便.本站放于WIN虚拟主机之下,前段时间想启用闲置多年的另一域名放到同一主机下,反正空间还有,也是同一服务商.随即开工,最终选用了以下这段跳转代码,很简单的一段代码,但偶不是码农,还是记下来,方便有同样需要的网友,如果你也是用的Win虚拟主机,我想会需要的.就是一段简单的判断语句.代码功能:根据用户输入的域名跳转到相应的站点.<br>]]>
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://yoursite.com/tags/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[多线ADSL自动更新IP脚本]]></title>
+    <link href="http://yoursite.com/2013/06/05/%E5%A4%9A%E7%BA%BFADSL%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0IP%E8%84%9A%E6%9C%AC/"/>
+    <id>http://yoursite.com/2013/06/05/多线ADSL自动更新IP脚本/</id>
+    <published>2013-06-05T01:21:20.000Z</published>
+    <updated>2015-03-23T00:07:32.272Z</updated>
+    <content type="html"><![CDATA[<p>应该是叫这个名字吧,反正一直用着运行正常.这里提供的是3线ADSL脚本,如果你的是两线或3线以上的环境,请将数字3更改为你的线路数,VM-ROS 2.9.27环境运行正常.</p>
+<a id="more"></a>
+<p>脚本如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">:<span class="built_in">local</span> assign-address</span><br><span class="line">:<span class="built_in">local</span> new-address</span><br><span class="line">:<span class="built_in">local</span> status</span><br><span class="line">:<span class="built_in">local</span> x</span><br><span class="line">:<span class="built_in">set</span> x <span class="number">3</span></span><br><span class="line">:<span class="keyword">for</span> i from=<span class="number">1</span> to=<span class="variable">$x</span> <span class="keyword">do</span>=&#123;</span><br><span class="line">:<span class="built_in">set</span> status [/interface get [/interface find name=(<span class="string">"pppoe-out"</span> . <span class="variable">$i</span>)] running]</span><br><span class="line">:<span class="keyword">if</span> (<span class="variable">$status</span>=<span class="literal">true</span>) <span class="keyword">do</span>=&#123;</span><br><span class="line">:<span class="built_in">set</span> new-address [/ip address get [/ip address find dynamic=yes interface=(<span class="string">"pppoe-out"</span> . <span class="variable">$i</span>)] address]</span><br><span class="line">:<span class="built_in">set</span> new-address [:pick <span class="variable">$new</span>-address <span class="number">0</span> ([:len <span class="variable">$new</span>-address] -<span class="number">3</span>)]</span><br><span class="line">:<span class="built_in">set</span> assign-address [/ip address get [/ip address find dynamic=no interface=(<span class="string">"pppoe-out"</span> . <span class="variable">$i</span>)] address]</span><br><span class="line">:<span class="built_in">set</span> assign-address [:pick <span class="variable">$assign</span>-address <span class="number">0</span> ([:len <span class="variable">$assign</span>-address] -<span class="number">3</span>)]</span><br><span class="line">:<span class="keyword">if</span> (<span class="variable">$assign</span>-address != <span class="variable">$new</span>-address) <span class="keyword">do</span>=&#123; /ip address <span class="built_in">set</span> [/ip address find comment=<span class="variable">$i</span>] address=<span class="variable">$new</span>-address network=<span class="variable">$new</span>-address broadcast=<span class="variable">$new</span>-address</span><br><span class="line">/ip route <span class="built_in">set</span> [/ip route find comment=<span class="variable">$i</span>] gateway=<span class="variable">$new</span>-address</span><br><span class="line">/ip firewall nat <span class="built_in">set</span> [/ip firewall nat find comment=<span class="variable">$i</span>] to-addresses=<span class="variable">$new</span>-address</span><br><span class="line">/ip route <span class="built_in">set</span> [/ip route find comment=<span class="variable">$i</span>] gateway=<span class="variable">$new</span>-address</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>应该是叫这个名字吧,反正一直用着运行正常.这里提供的是3线ADSL脚本,如果你的是两线或3线以上的环境,请将数字3更改为你的线路数,VM-ROS 2.9.27环境运行正常.</p>]]>
+    
+    </summary>
+    
+      <category term="ADSL" scheme="http://yoursite.com/tags/ADSL/"/>
+    
+      <category term="IP" scheme="http://yoursite.com/tags/IP/"/>
+    
+      <category term="ROS" scheme="http://yoursite.com/tags/ROS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[ROS一句话更新DDNS脚本]]></title>
+    <link href="http://yoursite.com/2013/05/31/ROS%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%9B%B4%E6%96%B0DDNS%E8%84%9A%E6%9C%AC/"/>
+    <id>http://yoursite.com/2013/05/31/ROS一句话更新DDNS脚本/</id>
+    <published>2013-05-30T19:51:08.000Z</published>
+    <updated>2015-03-23T00:07:32.241Z</updated>
+    <content type="html"><![CDATA[<p>标题起”ROS一句话更新DDNS脚本”,其实有点夸张,一条命令行感觉更合适.另一层意思就当是为了有个比较震憾效果的标题吧,标题党?呵~~</p>
+<a id="more"></a>
+<p>较早前本站放了<a href="http://www.heiok.com/717.html" target="_blank" rel="external">ROS几个版本系列的动态域名更新脚本</a>,经试用一段时间,效果不是那么令人满意,经常会出现无法正常更新或隔很多天才更新成功一次等情况(图一所示),这其中是脚本原因还是服务器原因没作深究,本月16日,我在ROS里放置网上流传的一句话更新DDNS脚本,感觉效果令人非常满意.简直是短小精干,强悍(图二所示).配合<a href="http://www.heiok.com/1256.html" target="_blank" rel="external">ROS多线ADSL动态映射脚本</a>一起使用,对于多线ADSL的远程管理来说十分方便,只要你有ADSL是能正常拨上的,都可用.所以,请各位有需要的网友们抛弃之前那些烦杂的DDNS动态更新脚本(当然,如果为了研究学习另当别论!),用以下这一条命令行即可搞定.我在ROS2.9.27下测试通过,工作正常.</p>
+<p><code>/tool dns-update name=你的动态域名 address=127.0.0.255 key-name=登录账号 key=登录密码</code></p>
+<p>127.0.0.255换为你ROS所在网络的广播地址应都有效,不一定非要是127.0.0.255.</p>
+<p><img src="/images/901b8463ae2a22c076917c324026933897eb09e9.jpg" alt="ROS_ddns_script" title="ROS_ddns_script"> <img src="/images/a72b43303fc57fe534112e7386523a27c319d090.jpg" alt="ROS一句话更新ddns脚本" title="ROS一句话更新ddns脚本"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>标题起”ROS一句话更新DDNS脚本”,其实有点夸张,一条命令行感觉更合适.另一层意思就当是为了有个比较震憾效果的标题吧,标题党?呵~~</p>]]>
+    
+    </summary>
+    
+      <category term="DDNS" scheme="http://yoursite.com/tags/DDNS/"/>
+    
+      <category term="ROS" scheme="http://yoursite.com/tags/ROS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[ROS多线ADSL动态映射脚本]]></title>
+    <link href="http://yoursite.com/2013/05/28/ROS%E5%A4%9A%E7%BA%BFADSL%E5%81%9ANTH%E7%BD%91%E9%93%B6%E7%99%BB%E9%99%86%E8%84%9A%E6%9C%AC/"/>
+    <id>http://yoursite.com/2013/05/28/ROS多线ADSL做NTH网银登陆脚本/</id>
+    <published>2013-05-27T16:38:50.000Z</published>
+    <updated>2015-03-23T00:07:32.241Z</updated>
+    <content type="html"><![CDATA[<p>ROS多线ADSL动态映射脚本,本脚本为三线ADSL脚本,如果你的不是三线,请将脚本中的数字3改为你的线路条数,脚本在2.9.27版本ROS下测试通过,2.9.27以上版本我相信也是可以的.</p>
+<p>脚本代码:</p>
+<a id="more"></a>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">:<span class="built_in">global</span> <span class="built_in">new</span></span><br><span class="line">:<span class="built_in">global</span> status</span><br><span class="line">:<span class="built_in">global</span> x</span><br><span class="line">:<span class="built_in">set</span> x <span class="number">3</span></span><br><span class="line">:<span class="keyword">for</span> i <span class="built_in">from</span>=<span class="number">1</span> <span class="built_in">to</span>=$x <span class="built_in">do</span>=&#123;</span><br><span class="line">:<span class="built_in">set</span> status [/interface <span class="built_in">get</span> [/interface find name=(<span class="string">"pppoe-out"</span> . $i)] running]</span><br><span class="line">:<span class="keyword">if</span> ($status=<span class="constant">true</span>) <span class="built_in">do</span>=&#123;</span><br><span class="line">:<span class="built_in">set</span> <span class="built_in">new</span> [/ip address <span class="built_in">get</span> [/ip address find dynamic=yes interface=(<span class="string">"pppoe-out"</span> . $i)] address]</span><br><span class="line">:<span class="built_in">set</span> <span class="built_in">new</span> [:pick $<span class="built_in">new</span> <span class="number">0</span> ([:<span class="built_in">len</span> $<span class="built_in">new</span>] -<span class="number">3</span>)]</span><br><span class="line">/ip firewall nat <span class="built_in">set</span> [/ip firewall nat find comment=(<span class="string">"SSH_"</span> . $i)] dst-address=$<span class="built_in">new</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <summary type="html">
+    <![CDATA[<p>ROS多线ADSL动态映射脚本,本脚本为三线ADSL脚本,如果你的不是三线,请将脚本中的数字3改为你的线路条数,脚本在2.9.27版本ROS下测试通过,2.9.27以上版本我相信也是可以的.</p>
+<p>脚本代码:</p>]]>
+    
+    </summary>
+    
+      <category term="ADSL" scheme="http://yoursite.com/tags/ADSL/"/>
+    
+      <category term="NTH" scheme="http://yoursite.com/tags/NTH/"/>
+    
+      <category term="ROS" scheme="http://yoursite.com/tags/ROS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Adobe Acrobat 11 安装注意事项]]></title>
+    <link href="http://yoursite.com/2013/04/14/Adobe%20Acrobat%2011%20%E5%AE%89%E8%A3%85%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
+    <id>http://yoursite.com/2013/04/14/Adobe Acrobat 11 安装注意事项/</id>
+    <published>2013-04-13T19:18:23.000Z</published>
+    <updated>2015-03-23T00:07:32.272Z</updated>
+    <content type="html"><![CDATA[<h2 id="Adobe_Acrobat_11_安装注意事项"><strong>Adobe Acrobat 11 安装注意事项</strong></h2><a id="more"></a>
+<ol>
+<li><span style="color: magenta;"><span style="text-decoration: underline;">断网后</span></span>安装，选择试用版安装</li>
+<li>安装完后，第一次打开程序后，选择输入序列号<br>用压缩包里Core的keygen产生序列号(选择<strong><span style="color: darkorange;">Adobe Acrobat Pro X v10.x</span></strong>)填进去（技巧：可以把整个序列号复制，然后在第一个空格内右键黏贴，后面的空格也会自动填充），并<strong><span style="color: darkorange;">暂时把序列号保存到记事本上</span></strong>，退出程序。<br>重新打开程序，会让你联网验证，<strong><span style="color: blue;">选择蓝色的“连接internet有问题“</span></strong>，会转入离线激活，把request code和刚才序列号填进X-Force的keygen，生成激活码，激活。<br>如上述激活过程不成功，<strong><span style="color: darkorange;">删除SLCache和SLStore文件夹，以及删除以前在host文件里所有关于adobe的项目</span></strong>。重新进行第2步。</li>
+<li>安装完后到C: \ Program Files \ Common Files \ Adobe \ ARM \ 1.0<br>把<br>AdobeARM<br>Armsvc<br>AcrobatUpdater<br>重命名<br>有可能程序会说这几个文件正在使用，无法操作，可以用unlocker解锁或者重启电脑。</li>
+<li>在host文件里加上<br>127.0.0.1 209.34.83.73:443<br>127.0.0.1 209.34.83.73:43<br>127.0.0.1 209.34.83.73<br>127.0.0.1 209.34.83.67:443<br>127.0.0.1 209.34.83.67:43<br>127.0.0.1 209.34.83.67<br>127.0.0.1 ood.opsource.net<br>127.0.0.1 199.7.52.190:80<br>127.0.0.1 199.7.52.190<br>127.0.0.1 OCSP.SPO1.VERISIGN.COM<br>127.0.0.1 199.7.54.72:80<br>127.0.0.1 199.7.54.72<br>127.0.0.1 192.150.14.69<br>127.0.0.1 192.150.18.101<br>127.0.0.1 192.150.18.108<br>127.0.0.1 192.150.22.40<br>127.0.0.1 192.150.8.100<br>127.0.0.1 192.150.8.118<br>127.0.0.1 209-34-83-73.ood.opsource.net<br>127.0.0.1 3dns-1.adobe.com<br>127.0.0.1 3dns-2.adobe.com<br>127.0.0.1 3dns-2.adobe.com<br>127.0.0.1 3dns-3.adobe.com<br>127.0.0.1 3dns-3.adobe.com<br>127.0.0.1 3dns-4.adobe.com<br>127.0.0.1 3dns.adobe.com<br>127.0.0.1 activate-sea.adobe.com<br>127.0.0.1 activate-sea.adobe.com<br>127.0.0.1 activate-sjc0.adobe.com<br>127.0.0.1 activate-sjc0.adobe.com<br>127.0.0.1 activate.adobe.com<br>127.0.0.1 activate.adobe.com<br>127.0.0.1 activate.wip.adobe.com<br>127.0.0.1 activate.wip1.adobe.com<br>127.0.0.1 activate.wip2.adobe.com<br>127.0.0.1 activate.wip3.adobe.com<br>127.0.0.1 activate.wip3.adobe.com<br>127.0.0.1 activate.wip4.adobe.com<br>127.0.0.1 adobe-dns-1.adobe.com<br>127.0.0.1 adobe-dns-2.adobe.com<br>127.0.0.1 adobe-dns-2.adobe.com<br>127.0.0.1 adobe-dns-3.adobe.com<br>127.0.0.1 adobe-dns-3.adobe.com<br>127.0.0.1 adobe-dns-4.adobe.com<br>127.0.0.1 adobe-dns.adobe.com<br>127.0.0.1 adobe-dns.adobe.com<br>127.0.0.1 adobe.activate.com<br>127.0.0.1 adobeereg.com<br>127.0.0.1 crl.verisign.net<br>127.0.0.1 CRL.VERISIGN.NET.<em><br>127.0.0.1 ereg.adobe.com<br>127.0.0.1 ereg.adobe.com<br>127.0.0.1 ereg.wip.adobe.com<br>127.0.0.1 ereg.wip1.adobe.com<br>127.0.0.1 ereg.wip2.adobe.com<br>127.0.0.1 ereg.wip3.adobe.com<br>127.0.0.1 ereg.wip3.adobe.com<br>127.0.0.1 ereg.wip4.adobe.com<br>127.0.0.1 hl2rcv.adobe.com<br>127.0.0.1 ood.opsource.net<br>127.0.0.1 practivate.adobe<br>127.0.0.1 practivate.adobe.</em><br>127.0.0.1 practivate.adobe.com<br>127.0.0.1 practivate.adobe.com<br>127.0.0.1 practivate.adobe.ipp<br>127.0.0.1 practivate.adobe.newoa<br>127.0.0.1 practivate.adobe.ntp<br>127.0.0.1 tss-geotrust-crl.thawte.com<br>127.0.0.1 wip.adobe.com<br>127.0.0.1 wip1.adobe.com<br>127.0.0.1 wip2.adobe.com<br>127.0.0.1 wip3.adobe.com<br>127.0.0.1 wip3.adobe.com<br>127.0.0.1 wip4.adobe.com<br>127.0.0.1 wwis-dubc1-vip60.adobe.com<br>127.0.0.1 wwis-dubc1-vip60.adobe.com<br>127.0.0.1 wwis-dubc1-vip60.adobe.com<br>127.0.0.1 www.adobeereg.com<br>127.0.0.1 www.wip.adobe.com<br>127.0.0.1 www.wip1.adobe.com<br>127.0.0.1 www.wip2.adobe.com<br>127.0.0.1 www.wip3.adobe.com<br>127.0.0.1 www.wip4.adobe.com<br>127.0.0.1 lmlicenses.wip4.adobe.com<br>127.0.0.1 lm.licenses.adobe.com</li>
+<li>联网</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="Adobe_Acrobat_11_安装注意事项"><strong>Adobe Acrobat 11 安装注意事项</strong></h2>]]>
+    
+    </summary>
+    
+      <category term="Acrobat" scheme="http://yoursite.com/tags/Acrobat/"/>
+    
+      <category term="Adobe" scheme="http://yoursite.com/tags/Adobe/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[qmail排错集锦]]></title>
+    <link href="http://yoursite.com/2013/04/12/qmail%E6%8E%92%E9%94%99%E9%9B%86%E9%94%A6/"/>
+    <id>http://yoursite.com/2013/04/12/qmail排错集锦/</id>
+    <published>2013-04-11T23:11:21.000Z</published>
+    <updated>2015-03-23T00:07:32.272Z</updated>
+    <content type="html"><![CDATA[<h2 id="qmail排错集锦">qmail<strong>排错集锦</strong></h2><p>1.虚拟域用户无法收信？</p>
+<p>Q：虚拟域为qmail.com，向fish@qmail.com用户发送邮件，邮件接收失败。查看/var/log/qmail/send/current，发现”_no_mailbox_here_by_that_name”的错误提示。</p>
+<p>A：进入/var/qmail/control/目录，编辑locals文件，将qmail.com条目删除即可。</p>
+<p>当locals和virtualdomains这两个文件同时记录了一个相同域名时，虚拟域将接收不了邮件，因为locals文件优先级高。</p>
+<p>另外，如果/var/qmail/control/rcpthosts文件内的格式不正确也会发生此问题。</p>
+<p>正确格式：”domain.com”</p>
+<a id="more"></a>2.使用ps –ef | grep svscan命令后，发现该svscan服务没有运行？<br><br>A：进入/package/admin/daemontools/common/目录，运行一下命令./svscanboot 手动启动svscan服务。<br><br>3．单独运行各个服务的run脚本，出现”softlimit：fatal:unable to run：file doesn’t exist”<br><br>A：确保所有run脚本没有多余空格<br><br>4. qmail-send服务启动失败<br><br>Q：启动qmail，发现qmail-send服务没有起来。进入/var/qmail/supervise/qmail-send/目录，运行./run命令，发现”cannot start：unable to open mutex” 错误<br><br>A：可能出现的原因就是sendmutex文件丢失。所以执行下列2个命令重新创建该文件。<br><br><code>touch /var/qmail/queue/lock/sendmutex
+
+Chown qmails:qmail /var/qmail/queue/locks/sendmutex</code><br><br>5．Squirrelmail的配置失效<br><br>Q：检测squirrelmail配置是否正确时，提示下列错误信息：<br><br>&gt; “ERROR：Required PHP PEAR DB support is not available。IS PEAR installed and is DB.PHP？the include path is now：/usr/share/pear”<br><br>A：检查以下包是否已经安装：<br><br>1.  php<br>2.  php-pear<br>3.  php-mysql<br>4.  php-pdo<br>5.  httpd<br>6.  mysql<br>7.  mysql-server<br>8.  mysql-devel<br>9.  openssl<br>10.  openssl-devel<br>11.  gdbm<br>12.  gdbm-devel<br>13.  stunnel<br>14.  krb5-level<br>安装完上述所有软件后，进入/usr/share/pear/目录，执行该命令：”pear insall DB”<br><br>6．Squirrelmail无法连接到25端口或143端口？<br><br>A：尝试关闭SElinux服务<br><br>编辑 vi /etc/selinux/config<br><br>修改SELINUX=enforcing 为 SELINUX=disable<br><br>保存退出，重启机器。<br><br>7．Error：couldn’t connect to PSN for preferences？<br><br>A：可以尝试重新给MYSQL用户赋予权限，使用以下命令：<br><br><code>Grant select，insert，update，delete，on squirrelmail.* to squirrelmailuser@localhost identified by “squirrelpassword”</code><br><br>8．Tcpserver；fatal：temporarily unable to figure out IP address for 0.0.0.0：file does not exist？<br><br>A：<code>touch /etc/dnsrewrite</code><br><br>9. 无法发送邮件，查看/var/log/qmail/send/current日志，报如下错误：<br><br>“deferral：uh-oh：<em>.qmail_has_prog_delivery_but_has_x_bit_set.</em>”<br><br>A：找到所有.qmail文件，去除执行位”x”即可<br><br>10．登录squiirelmail后，出现如下错误：<br><br>“Error：couldn’t complete request query CREATE ”INBOX SENT” Reason Given invalid mailbox name”<br><br>A．出现这样的错误说明squirrelmail配置错误<br><br>编辑 perl conf.pl<br><br>选3　FOLDER DEFAULTS<br><br>1. Default Folder Prefix   ：INBOX。<br><br>3. Trash Folder          ：Trash<br><br>4. Sent Folder           ：Sent<br><br>5. Drafts Folder          ：Drafts<br><br>11．用squirrelmail登录时，出现如下错误：<br><br>“you must be loged into access this page”<br><br>A：<code>chown –R root.vchkpw /var/lib/php/session</code><br><br>Chmod 777 /var/lib/php/session<br><br>12．为QMAIL安装stmtpd补丁包，操作流程(vpopmail安装后再打补丁)<br><br>A：进入netqmail安装目录<br><br><code>Cd /usr/local/src/netqmail-1.05/netqmail-1.05</code><br><br>Patch &lt; /usr/local/src/netqmail-1.05-tls-smtpauth-20070417.patch<br><br>Make<br><br>qmailctl stop<br><br>make setup check<br><br>或者<br><br><code>Cd /usr/local/src/netqmail-1.05/netqmail-1.05</code><br><br>Bunzip2 –c /usr/local/src/qmail-toaster-0.82.patch.bz2 | patch –p0<br><br>Make clean<br><br>Make<br><br>Qmailctl stop<br><br>Make setup check<br><br>Chown –R vpopmail.vchkpw /var/qmail/spam<br><br>13.　451 qq write error or disk full<br><br>A．qmail queue 所在磁盘空间不足<br><br>Qmail-queue的权限设置不正确或文件有问题<br><br>14．The smtp server reply:qq crashed<br><br>A．修改smtp启动脚本，改大smtp的softlimit<br><br>15．IGENUS登录后显示空白页面，查看日志提示：”call to undefined function”：mysql<em>connect()<br><br>A．出现以上错误是”php-mysql”包没有安装导致<br><br>尝试 <code>chgrp －R vchkpw /var/lib/php/session</code><br><br>16． vpopmail用户的ID和vchkpw组的ID要与/var/qmail/user/assign文件中的邮件地址域的ID号要相同。<br><br><img src="/images/6fd5cf9cb9bd38ccf0d460788f1c7586c4e40b5d.png" alt="vpopmail" title="vpopmail"><br><br>17. 安装“uscpi-tcp-0.88”遇到下列错误：<br><br>Install：fatal：unable to write …/bin/tcpserver：text busy<br><br>A：说明tcpserver还在运行，杀掉进程再安装<br><br>18. 增加某个虚拟域时，提示“Error-no authentication database connection initial open”<br><br>A：如果是用源代码安装的mysql，通常vpopmail找不到“/var/lib/mysql/mysql.sock“文件，需要做个连接：<br><code>ln –s /tmp/mysql.sock /var/lib/mysql/mysql.sock</code><br><br>19. qmail-smtpd服务启动失败，运行其脚本出现如下错误：<br><br>&gt; “QMAILUID,NOFILESGID,MAXSMTPD,or LOCAL is unset in /var/qmail/supervise/qmail-smtpd/run“<br><br>A：说明其中一个变量值为空，确保每个变量都有正确的值，确保/var/qmail/control/目录下的“me , rcpthosts , defaultdomain , plusdomain“这四个文件有正确的域名，域名格式如下：<br><br>domain.com:domain.com<br><br>20. tcpserver：warning：droping connecting , unable to read /home/vpopmail/etc/tcp.smtp.cdb file does not exist .<br><br>A：<code>chmod 755 /home/vpopmail</code><br><br><code>chown root.root /home/vpopmail</code><br><br><code>chown root.root /home/vpopmail/etc</code><br><br><code>chown root.root /home/vpopmail/etc/tcp.smtp</code><br><br><code>chown root.root /home/vpopmail/etc/tcp.smtp.cdb</code><br><br>重启机器。<br><br>21. 客户端无法收取邮件，错误日志如下：<br><br>&gt; Vchkpw-pop3：vpopmail user not found xxx@：192.168.0.5<br><br>A：将客户端的帐号改为：user@domain.com<br><br>确保该帐号确实存在。<br><br>22. 邮件发生失败，提示下列错误：<br><br>&gt; Delivery 2：deferral：unable to_switch_to</em>/home/vpopmail/domain/xxx.com：_access_denied<br><br>A：出现此错误可能的原因是修改了vpopmail和vchkpw的uid和gid<br><br><code>cd /var/qmail/users</code><br><br><code>qmail-pw2u &amp;lt; /etc/password &amp;gt;&amp;gt; assign</code><br><br><code>qmail-newu</code><br><br>23. 运行smtp脚本时报错：bad interpreter . No such file or directory<br><br>A：原因不是找不到文件，而是脚本的文件格式不对，很可能是DOS格式，可以用下列方法查看文件格式<br><br>打开smtp的脚本：vi run<br><br>查看文件格式：   : set ff?<br><br>可以看到dos或unix字样，若是dos，即可用 : set ff=unix转换格式，存盘退出<br><br>24. 客户端连接Qmail超时<br><br>A：大多数原因是smtp脚本设置不正确少了一个“-H“参数，<br><br>将 “tcpserver –v –R –l 0 –x /home/vpopmail/etc/tcp.smtp.cdb“<br><br>改成  “tcpserver –v –H –R –l 0 –x /home/vpopmail/etc/tcp.smtp.cdb“<br><br>其原因是当连接25端口时，QMAIL会查询远端主机的信息，加了“-H “就可以解决此问题<br><br>25. 发送信件时报错：“SMTP Server reply 451 SPF lookup failure“<br><br>A：原因是在/var/qmail/control/目录下有个“spfbehavior“文件，可以临时性的将此文件移除该目录即可<br><br>26. 打完SMTP验证补丁后，验证失败报错：“unable to write pipe and I can’t auth“<br><br>A：出现这种原因是,在打完补丁后，没有对其SMTP脚本做如下修改：<br><br>将“QMAILUID=<code>id –u qmaild</code>“<br><br>“NOFILESGID=<code>id –u qmaild</code>“<br><br>改成“QMAILUID=<code>id –u vpopmail</code>“<br><br>“NOFILESGID=<code>id –u vpopmail</code>“<br><br>27. 删除邮件队列里的邮件<br><br>A：<code>qmailctl stop</code><br><br><code>mv /var/qmail/queue/lock  /tmp</code><br><br><code>find /var/qmail/queue –type f | xargs rm –f</code><br><br><code>mv /tmp/lock  /var/qmail/queue/</code><br><br><code>qmailctl start</code><br><br>28. telnet localhost 25 失败，日志如下：<br><br>&gt; “warning：droping connecting, unable to read /home/vpopmail/etc/tcp.smtp.cdb:：access denied“<br><br>A： <code>chmod 755 /home/vpopmail</code><br><br>29. 由于各种原因，在添加虚拟域的时候，提示该错误“Error: Domain already exists ”<br><br>A：通过以下步骤排除错误：<br><br>1. 重新启动qmail服务<br><br>2. 尝试删除该域：vdeldomain domain.com<br><br>3. 如果上述操作失败，进入数据库，看该域是否存在，如果存在就把它删除<br><br>4. 进入/var/qmail/control/目录，尝试清除如下文件里的域：<br><br>virtualdomains<br><br>me<br><br>locals<br><br>rcpthosts<br><br>defaultdomain<br><br>plusdomain<br><br>5. 进入/var/qmail/users/目录，查看assign文件，清除相应域的记录，并执行下列命令刷新<br><br><code>qmail-newu</code><br><br>30. 发送邮件失败,出现下列错误日志信息:<br><br>“delivery 8: failure: Connected_to_24.24.24.2_but_sender_was_rejected./Remote_host_said:_554_5.1.0_Sender_Denied/”<br><br>原因分析：Qmail试图向远端的24.24.24.2的邮件系统发送邮件，但是却遭到了对方的拒绝。<br><br>A：<br><br>1.  如果您是向合伙人或者分支机构间发送邮件时遇到此类问题，请与对方的管理员取得联系，查明是否设置过滤将自己给挡在了外面。<br>2.  如果是将邮件发送于此类hotmail.com邮件系统却遭到了同样的问题，请确保自己的邮件服务器的IP地址没有被列入黑名单。<br>&nbsp;<br><br>31. 实现邮件监控目的：当用户在发送或收取邮件的同时，会将邮件的副本发送到另一个邮箱中以实现邮件备份的方式<br><br>A：要实现这个目的，就需要进入Qmail的源目录（netqmail-1.05/netqmail-1.05），编辑extra.h文件。假设建立一个monitor邮件账户，该账户就是用来转存所有用户发送或收取邮件的同时将副本发送到此邮箱。编辑内容如下：<br><br>&gt; define QUEUEEXTRA “Tmonitor\0”<br><br>&gt; define QUEUEEXTRALEN 9<br>QUEUEEXTRA是这样设置的，大写字母T，然后是用户名，最后是空字符“\0”。QUEUEEXTRALEN表示是QUEUE_EXTRALEN的程度，上面算下来是九个字符，所以它为9。<br><br>然后生成~alias/.qmail-log，在此文件里面添加：./logmaildir/<br><br>最后重新编译Qmail<br><br>32. 重复收取同一封邮件的问题。当A给B发邮件，B会收取A的多个邮件副本。<br><br>A：尝试删除用户邮件目录下的.qmail文件可以解决该问题。<br><br>33. 阐述Qmail控制文件特性，这些控制文件位于/var/qmail/control/目录下<br><br>badmailfrom：拒绝接收邮件，可以防范垃圾邮件，每一个条目占一行。<br><br>例如，要拒绝abc@sohu.com和hotmail.com域的邮件，格式如下：<br><br>abc@sohu.com<br><br>@hotmail.com<br><br>concurrencylocal：用来决定qmail可以同时运行的本地投递进程的数目，默认值是10，标准安装的qmail最大可设值是120。<br><br>concurrencyremote：用来决定qmail可以同时运行的远程投递进程的数目，默认值是20，就是说，qmail可以在同一时间内 同时发送20封邮件，标准安装的qmail最大可设值是120。要使其生效必须重新启动Qmail进程。<br><br>locals：用来为qmail指明位于本地的邮件地址。qmail-send利用此文件来判断收件人地址是否是一个本地址。<br><br>me：如果没有me文件，那么你的qmail将拒绝执行<br><br>virtualdomains：让qmail接受本地邮件以外，还接受该文件中指定的域或者邮件地址，就是常说的虚拟域支持。<br><br>databytes：该文件控制着邮件本身的大小，该大小指的是邮件全文大小，包含邮件头、正文、附件内容等<br><br>如果要控制邮件大小再10M，其计算公式就是(10<em>1024</em>1024=10485760)<br><br>rcpthosts：这个文件用来指定qmail可以接收的除本地主机名外的其他域名<br><br>34. 安装Qmail可视化管理界面—Qmailadmin<br><br>A：要安装qmailadmin之前，必须要安装Autorespond和Ezmlm<br><br>安装Autorespond步骤：<br><br><code>tar -xvzf autorespond-2.0.2.tar.gz</code><br><br><code>cd autorespond-2.0.5</code><br><br><code>make</code><br><br><code>make install</code><br><br>安装Ezmlm步骤：<br><br><code>tar -xvzf ezmlm-0.53.tar.gz</code><br><br><code>tar -xvzf ezmlm-idx-0.443.tar.gz</code><br><br><code>cp -rf ezmlm-idx-0.443/* ezmlm-0.53/</code><br><br><code>cd ezmlm-0.53</code><br><br><code>patch &amp;lt; idx.patch</code><br><br><code>make</code><br><br><code>make man</code><br><br><code>make setup</code><br><br>最后安装qmailadmin<br><br><code>tar -xvzf qmailadmin-1.2.11.tar.gz</code><br><br><code>cd qmailadmin-1.2.11</code><br><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">.</span><span class="comment">/configure</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">enable</span><span class="literal">-</span><span class="comment">htmldir=/var/www/html</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">enable</span><span class="literal">-</span><span class="comment">cgibindir=/var/www/cgi</span><span class="literal">-</span><span class="comment">bin</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">enable</span><span class="literal">-</span><span class="comment">vpopuser=vpopmail</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">enable</span><span class="literal">-</span><span class="comment">autoresponder</span><span class="literal">-</span><span class="comment">bin=/usr/bin</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">disable</span><span class="literal">-</span><span class="comment">ezmlm</span><span class="literal">-</span><span class="comment">mysql</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">enable</span><span class="literal">-</span><span class="comment">modify</span><span class="literal">-</span><span class="comment">quota </span> <span class="literal">-</span><span class="literal">-</span><span class="comment">enable</span><span class="literal">-</span><span class="comment">domain</span><span class="literal">-</span><span class="comment">autofill</span></span><br></pre></td></tr></table></figure>
+<p><code>make</code></p>
+<p><code>make install-strip</code></p>
+<p><code>cd /usr/local/share/qmailadmin/lang</code></p>
+<p><code>mv en en.bak</code></p>
+<p><code>cp zh-cn en</code></p>
+<p>要注意的是：访问该管理界面的URL是通常是<a href="http://x.x.x.x/cgi-bin/qmailadmin" target="_blank" rel="external">http://x.x.x.x/cgi-bin/qmailadmin</a></p>
+<p>登陆名必须是postmaster</p>
+<p>35．安装Clam AntiVirus之后，启动该进程失败。</p>
+<p>A：原因是系统中没有swap分区。</p>
+<p>只要在现有的硬盘里分配一个swap分区或者在安装系统时安装swap分区就可以解决此问题。</p>
+<p>36. 更改Qmail默认连接端口为587</p>
+<p>A：默认情况下，Qmail用户通过25端口来连接邮件服务器发送邮件，但为了提升安全性可以更改Qmail的默认端口为587。这样的一个行为，仅仅影响到MUA客户端连接邮件服务器，并不会影响到邮件服务器与邮件服务器之间的连接，他们之间的连接仍然用的是25端口。</p>
+<p>步骤一：</p>
+<p>复制qmail-smtpd（位于/var/qmail/bin目录）为qmail-smtpd-auth</p>
+<p>步骤二：</p>
+<p>使用十六进制编辑器（hex editor）打开qmail-smtpd-auth并查找关键字rcpthosts</p>
+<p>步骤三：</p>
+<p>用rcptempty替换rcpthosts</p>
+<p>步骤四：</p>
+<p>在/var/qmail/control目录下，创建rcptempty文件</p>
+<p>步骤五：</p>
+<p>修改端口为587</p>
+<p>编辑/var/qmail/supervise/qmail-smtpd/run文件，原始配置（贴出一部分）</p>
+<p><img src="/images/503b88a3cea4618a0a57fd54760c8c23c8b0f6b3.png" alt="qmail_587port" title="qmail_587port"></p>
+<p>将上述红色部分，按如下修改：</p>
+<p><img src="/images/57bdbc115ccebddf579349d8f86e5323b18174e2.png" alt="qmail_587port" title="qmail_587port"></p>
+<p>步骤六：</p>
+<p>重新启动Qmail服务，并尝试使用587端口进行连接。</p>
+<p>37．“Sorry,<em>message_has_wrong_owner.</em>(#4.3.5)”</p>
+<p>A：原因是queue队列损坏，删除/var/qmail/queue目录，重新make setup check生成目录</p>
+<p>38．经常收到来自&lt;&gt;和&lt;#@[]&gt;的邮件</p>
+<p>A：这两种信件都是系统产生的，区别在于&lt;&gt;是系统single bounce的地址，而&lt;#@[]&gt;是系统double bounce或者triple bouces的地址。系统用这两种地址是为了避免邮件回路。</p>
+<p>用下列方式解决此问题：</p>
+<p>echo “#” &gt; /var/qmail/alias/.qmail-doublebounceto</p>
+<p>echo “doublebounceto” &gt; /var/qmail/control/doublebounceto</p>
+<p>编辑/etc/profile文件，添加如下变量</p>
+<p>QMAILUSER=”admin”</p>
+<p>QMAILHOST=”sinotex.cc”</p>
+<p>编辑/usr/share/logwatch/default.conf/logwatch.conf文件，找到如下条目做相应修改：</p>
+<p>MailTo = admin@sinotex.cc</p>
+<p>39．Maildrop报错“Cannot<em>have_world/group_permissions_on_the_filter_file</em>-_for_your_own_good./</p>
+<p>A：mailfilter必须是600属性，脚本样板如下：</p>
+<p>该脚本支持用户自定义黑白名单，又不需要到处放.mailfilter的方法：</p>
+<p>来自于白名单中的邮件直接跳过该脚本的处理，将邮件发到收件人邮箱中</p>
+<p>来自于黑名单中的邮件将直接被删除。</p>
+<p>如下修改.qmail-default</p>
+<p>vi .qmail-default</p>
+<p>|/usr/local/bin/maildrop ./.mailfilter</p>
+<p>创建mailfilter邮件过来脚本<br>```<br>vi .mailfilter</p>
+<p>SHELL=/bin/sh</p>
+<p>import EXT</p>
+<p>import HOST</p>
+<p>VPOP=”| /home/vpopmail/bin/vdelivermail ‘’ bounce-no-mailbox”</p>
+<p>VHOME=<code>/home/vpopmail/bin/vuserinfo -d $EXT@$HOST</code></p>
+<h1 id="check_dir">check dir</h1><p><code>test -d $VHOME/Maildir/</code></p>
+<p>if( $RETURNCODE != 0 )</p>
+<p>{</p>
+<p>echo “Sorry,_no_mailbox_here_by_that_name.”</p>
+<p>EXITCODE=77</p>
+<p>exit</p>
+<p>}</p>
+<h1 id="blacklist">blacklist</h1><p>#</p>
+<p><code>test -f $VHOME/.blacklist</code></p>
+<p>if ($RETURNCODE==0)</p>
+<p>{</p>
+<p>$DOMAIN=<code>expr $SENDER : &#39;.*@\(.*\)&#39;</code></p>
+<p>if ($SENDER ne ‘’ &amp;&amp; (lookup($SENDER, “$VHOME/.blacklist”) || lookup($DOMAIN, “$VHOME/.blacklist”)))</p>
+<p>{</p>
+<h1 id="to_“$VHOME/Maildir/-Trash/“">to “$VHOME/Maildir/.Trash/“</h1><p>to /dev/null</p>
+<p>}</p>
+<p>}</p>
+<h1 id="whitelist">whitelist</h1><p>#</p>
+<p><code>test -f $VHOME/.whitelist</code></p>
+<p>if ($RETURNCODE==0)</p>
+<p>{</p>
+<p>if ($SENDER ne ‘’ &amp;&amp; lookup($SENDER, “$VHOME/.whitelist”))</p>
+<p>{</p>
+<p>to “$VHOME/Maildir/“</p>
+<p>}</p>
+<p>}</p>
+<h1 id="spamassassin">spamassassin</h1><p>#</p>
+<p>if ($SIZE &lt; 262144)</p>
+<p>{</p>
+<p>exception {</p>
+<p>xfilter “spamc -f -u $EXT@$HOST”</p>
+<p>}</p>
+<p>}</p>
+<p>else</p>
+<p>{</p>
+<p>exception {</p>
+<p>to “$VHOME/Maildir/“</p>
+<p>}</p>
+<p>exception {</p>
+<p>to “$VPOP”</p>
+<p>}</p>
+<p>}</p>
+<p>if (/^X-Spam-Flag: *YES/)</p>
+<p>{</p>
+<p>ADDQUOTA = “ $SIZE 1”</p>
+<p><code>echo $ADDQUOTA &amp;gt;&amp;gt; $VHOME/Maildir/maildirsize</code></p>
+<p>to “$VHOME/Maildir/.Trash/”</p>
+<p>}</p>
+<p>else</p>
+<p>{</p>
+<p>exception {</p>
+<p>to “$VHOME/Maildir/”</p>
+<p>}</p>
+<p>exception {</p>
+<p>to “$VPOP”</p>
+<p>}</p>
+<p>}`</p>
+<p>40．<strong>Maildrop**</strong>报错“Unable<em>to_execute</em>/sbin/nologin/Unable<em>to_execute</em>/sbin/nologin/<strong><strong>”或“sorry,<em>no_mailbox_here_by_that_name.</em></strong></strong>”**</p>
+<p>A：如果编译maildrop的时候设置了vpopmail做为uid来跑，即：</p>
+<p>./configure –enable-maildrop-uid=vpopmail –enable-maildrop-gid=vchkpw –enable-maildirquota</p>
+<p>则必须给vpopmail一个shell,默认是/sbin/nologin，修改/etc/passwd ，改为/bin/bash即可。</p>
+<p>41. <strong>无论是本地用户还是国外寄来的邮件都无法对其处理即无法收邮件，也无法发送邮件？</strong></p>
+<p>A：所有要发送的邮件或是要接收的邮件都处在队列里，但是并没有处理在队列里的邮件，通过使用qmHandle –l命令发现：messages in queue but not yet preprocessed：x。</p>
+<p>显然qmail不知道如何去处理队列中的邮件，可以尝试如下步骤排除：</p>
+<p>a：qmailctl stop</p>
+<p>b：再运行qmailctl stat，重点查看qmail-send的状态，若出现如下状况那么就是qmail-send的问题：</p>
+<p>/service/qmail-send：up(pid xxx)xxxx second,want down</p>
+<p>上述状态说明，qmail-send没有正确运行</p>
+<p>c：cd /var/qmail/supervise/qmail-send</p>
+<p>./run  若出现下列状况，那么可以肯定是qmail-send出错导致无法处理邮件：</p>
+<p>Alert:cannot start: qmail-send is already running</p>
+<p>d：ps –aux | grep qmail-send 若出线下列进程将其杀掉：</p>
+<p>qmails xxx 0.0  0.0 xxx xxx ?  S 23:11  0:00 qmail-send</p>
+<p>由于在第一步已经将qmail停用，所以不应该出现上述qmail-send的进程</p>
+<p>f：将上述进程杀掉，在重新启动qmail</p>
+<p>42. <strong>qmail-scanner**</strong>无法对本地用户发来的邮件实施垃圾邮件过滤？日志提示如下信息**：</p>
+<p><div></div></p>
+<p><pre>      SA: don’t scan as RELAYCLIENT implies this was sent by a local user</pre><br><br>A：给tcp.smtp规则文件中添加一条QS_SPAMASSASSIN=”on”的记录，如下</p>
+<p>vi ~vpopmail/etc/tcp.smtp</p>
+<p>:allow,QS_SPAMASSASSIN=”on”</p>
+<p>加载tcp.smtp的db文件</p>
+<p>qmailctl cdb</p>
+<p>43. <strong>再重装qmail**</strong>系统之后无法正常运行，错误如下：**</p>
+<p>运行qmailctl stat错误如下，即使重新启动服务器也无济于事</p>
+<p>/service/qmail-send: unable to open supervise/ok: file does not exist</p>
+<p>/service/qmail-send/log: unable to open supervise/ok: file does not exist</p>
+<p>/service/qmail-smtpd: unable to open supervise/ok: file does not exist</p>
+<p>/service/qmail-smtpd/log: unable to open supervise/ok: file does not exist</p>
+<p>/service/qmail-pop3d: unable to open supervise/ok: file does not exist</p>
+<p>/service/qmail-pop3d/log: unable to open supervise/ok: file does not exist</p>
+<p>停止qmail系统，单独运行qmail-smtpd的run脚本仍然报错：</p>
+<p>qmailctl stop</p>
+<p>cd /var/qmail/supervise/qmail-smtpd &amp;&amp; ./run 出现如下错误：</p>
+<p>tcpserver: fatal: unable to bind: address already used</p>
+<p>A：首先停止qmail：qmailctl stop</p>
+<p>查询25端口是否启动：netstat –atulnp 若出现如下显示，请将其进程杀掉：</p>
+<p>tcp   0    0 0.0.0.0:25     0.0.0.0:*     LISTEN      2606/tcpserver</p>
+<p>杀掉上述进程2606：kill -9 2606</p>
+<p>启动qmail：qmailctl start</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="qmail排错集锦">qmail<strong>排错集锦</strong></h2><p>1.虚拟域用户无法收信？</p>
+<p>Q：虚拟域为qmail.com，向fish@qmail.com用户发送邮件，邮件接收失败。查看/var/log/qmail/send/current，发现”_no_mailbox_here_by_that_name”的错误提示。</p>
+<p>A：进入/var/qmail/control/目录，编辑locals文件，将qmail.com条目删除即可。</p>
+<p>当locals和virtualdomains这两个文件同时记录了一个相同域名时，虚拟域将接收不了邮件，因为locals文件优先级高。</p>
+<p>另外，如果/var/qmail/control/rcpthosts文件内的格式不正确也会发生此问题。</p>
+<p>正确格式：”domain.com”</p>]]>
+    
+    </summary>
+    
+      <category term="qmail" scheme="http://yoursite.com/tags/qmail/"/>
+    
+  </entry>
+  
+</feed>
