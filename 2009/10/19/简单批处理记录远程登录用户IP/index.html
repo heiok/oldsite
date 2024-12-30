@@ -228,15 +228,15 @@
 <p>需要准备的软件：Bat to Exe converter （一款将批处理编译为exe执行文件的软件）</p>
 <p>实现过程：（以2003 企业版为例）</p>
 <p>1.在C盘根目录下，建立一个存放记录登录IP的目录C:\RDP与日志文件，RDPlog.txt放在RDP目录下，如图：</p>
-<p><img src="/images/dd62866151d6f4c37ed8078f352855a8fd0cfcd0.jpg" alt="远程登录用户IP记录" title="远程登录用户IP记录"></p>
+<p><img src="/oldsite/images/dd62866151d6f4c37ed8078f352855a8fd0cfcd0.jpg" alt="远程登录用户IP记录" title="远程登录用户IP记录"></p>
 <p>2.然后在“C:\RDP”目录下创建一个名字为“RDPlog.bat”的批处理文件，内容如下：<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">date</span> /t <span class="subst">&amp;</span><span class="literal">gt</span>;<span class="subst">&amp;</span><span class="literal">gt</span>;RDPlog<span class="built_in">.</span>txt</span><br><span class="line">time /t <span class="subst">&amp;</span><span class="literal">gt</span>;<span class="subst">&amp;</span><span class="literal">gt</span>;RDPlog<span class="built_in">.</span>txt</span><br><span class="line">netstat <span class="attribute">-n</span> <span class="attribute">-p</span> tcp <span class="subst">|</span> find <span class="string">"3389"</span><span class="subst">&amp;</span><span class="literal">gt</span>;<span class="subst">&amp;</span><span class="literal">gt</span>;RDPlog<span class="built_in">.</span>txt</span><br><span class="line">start Explorer</span><br></pre></td></tr></table></figure></p>
-<p><img src="/images/c5c61c7c894ab3d597a862de16048a8dda153c48.jpg" alt="远程登录用户IP记录" title="远程登录用户IP记录"></p>
+<p><img src="/oldsite/images/c5c61c7c894ab3d597a862de16048a8dda153c48.jpg" alt="远程登录用户IP记录" title="远程登录用户IP记录"></p>
 <p>3.打开Bat to Exe converter，将RDPlog.bat编译为RDPlog.exe，在“可视性”选项里点选隐藏应用程序，不然程序执行时会有启动界面。</p>
-<p><img src="/images/337e68e82117d00f7922798c316d42e1c28519ed.jpg" alt="远程登录用户IP记录" title="远程登录用户IP记录"></p>
+<p><img src="/oldsite/images/337e68e82117d00f7922798c316d42e1c28519ed.jpg" alt="远程登录用户IP记录" title="远程登录用户IP记录"></p>
 <p>4.进入系统的控制面板、管理工具，打开 终端服务配置 ，点击左侧 连接 ，然后双击 右侧窗口的RDP-Tcp，再点击 环境 ，选 用户登录时启用下列程序 。如图：</p>
-<p><img src="/images/9ec6205b578539b618beaadbf7641b99360247b1.jpg" alt="远程登录用户IP记录" title="远程登录用户IP记录"></p>
+<p><img src="/oldsite/images/9ec6205b578539b618beaadbf7641b99360247b1.jpg" alt="远程登录用户IP记录" title="远程登录用户IP记录"></p>
 <p>5.设置完毕，确定退出。局域网内测试了一下，查看远程连接IP，打开Ｃ:\RDP\RDPlog.txt查看地，如图所示：</p>
-<p><img src="/images/1f155c14b4561d221e1f222d714d06d022b05c9c.jpg" alt="远程登录用户IP记录" title="远程登录用户IP记录"></p>
+<p><img src="/oldsite/images/1f155c14b4561d221e1f222d714d06d022b05c9c.jpg" alt="远程登录用户IP记录" title="远程登录用户IP记录"></p>
 
       
     </div>

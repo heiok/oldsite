@@ -221,7 +221,7 @@
       
         <p>公司里有搭建邮件服务器,方便同事间的交流,但自搭建运行以来,便一直存在一个问题,香港同事回港后,使用客户端只可以收取公司服务器邮件,而无法通过客户端由公司邮件服务器发送邮件,香港办事处则可以(商用宽频),但其他非公司邮件则收发正常.在本文方法之前的解决办法是发公司邮件通过WEB方式发送.经查,香港同事回港后(主要是使用家居宽频)无法通过客户端发送公司邮件的原因是由于香港ISP封锁了非服务商提供的所有25端口,例如:如果你是香港HKBN的家居宽频用户,则只有往HKBN的25端口可通行,其他方向的一律DROP,换言之,要通过邮件客户端25端口发送邮件,必须经HKBN,由他代转发,看下图会更加明白,这是一位使用香港PCCW网上行邮件服务的用户,在邮件客户端的设置.</p>
 <a id="more"></a>
-<p><img src="/images/b0305b22816ebaa1fa5df501813900216208cf0a.jpg" alt="香港HKBN SMTP服务器" title="香港HKBN SMTP服务器"></p>
+<p><img src="/oldsite/images/b0305b22816ebaa1fa5df501813900216208cf0a.jpg" alt="香港HKBN SMTP服务器" title="香港HKBN SMTP服务器"></p>
 <p>鉴于以上情况,为运行中的qmail邮件服务器新增了一个SMTP端口,已正常运行较长一段时间,这里发文说下步骤与方法,共享给有需要的网友,或许有网友会有疑问,那你的公司邮件也由HKBN来转发不就行了么?为何如此麻烦?其实我们的邮件服务器只供公司内部交流,即是内部邮件服务器,不对公网开放.通常来说,本文只适用于中国大陆之外的用户.因为目前大陆ISP只是封锁个人80端口,对于25端口并没发现或听闻有封锁.</p>
 <p>qmail邮件服务新增SMTP端口方法与具体步骤:(为了方便,本文新增SMTP端口为465)</p>
 <p>第一步,将/var/qmail/supervise/qmail-smtpd复制多一份并改名,为方便日后查询,建议在名字后面加上新增的端口号,如SMTP-465之类的;<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># cp -Rp <span class="regexp">/var/</span>qmail<span class="regexp">/supervise/</span>qmail-smtpd <span class="regexp">/var/</span>qmail<span class="regexp">/supervise/</span>qmail-smtpd-<span class="number">465</span></span><br></pre></td></tr></table></figure></p>
